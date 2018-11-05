@@ -1,0 +1,8 @@
+<SSOAffiliates>
+<Affiliate name="MaximoWebServices" type="Group" description="${HostDNSName}\somethinggoeshere" contact="SSO administrator."
+             adminGroup="CORP\AGC00_BtAffAdmP"
+             userGroup="CORP\AGC00_BtPrdTeam;CORP\AGC00_BtHostUsrP;CORP\AGC00_BtSvcP;CORP\AGC00_BtIsoP"
+             allowLocal="false" allowTickets="true">
+    <Mapping accounts="CORP\AGC00_BtPrdTeam;CORP\AGC00_BtHostUsrP;CORP\AGC00_BtSvcP;CORP\AGC00_BtIsoP" remoteUserId="AGC00_BtMxSvcP" remotePassword="${MaximoWebServicesAccountPassword}" />
+  </Affiliate>
+</SSOAffiliates>

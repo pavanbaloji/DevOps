@@ -1,0 +1,528 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="329d34bf-379a-4e75-8ad8-63cdf6f1eed8" LowerBound="1.1" HigherBound="152.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Avista.ESB.OrchestrationServices" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="89fa450c-463c-4a4d-910e-7204aaafa967" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveEsbFaultPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="cd068b7b-0ab5-4e4a-b317-e8a7336eb459" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OpsReceiveEsbFault" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="ff98cbe6-3397-4bcb-a329-57d4553aa185" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="e297542b-958d-480e-948b-40cbabe3a79c" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="151.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="FaultHandler" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="9e39069f-803e-480a-b4b2-d6c74734206e" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="btsMsgType" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="764d9372-a843-4a55-ad4b-b93effa9a8bd" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="89bcb2fe-f579-4cb8-a6c9-77db6734447c" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="InitialValue" Value="&quot;&quot;" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="archiveTagName" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1cf6427b-4ea2-4843-907a-4cabd8018194" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="errXmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="ae193fed-7f4c-4e49-87ae-18fdce015473" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Avista.ESB.Utilities.ArchiveManager" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="archiveManager" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="b76e1b5e-e9cc-44af-a957-3d35da0c1719" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="description" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="075e6cd6-fc97-46b6-84e0-f6e6ddcef616" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="receivePort" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="2e683302-4800-4f20-b54a-417ec5133dca" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="sourceSystem" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8d30935e-e625-4700-8fd5-1d2d57f4bc64" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Exception" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="exception" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a6b49f73-3ad9-484c-92a5-40f7bcb59fbb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgFaultIn" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d3fd389b-6ca9-4aaf-b7cf-20d8aefbe656" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="Avista.ESB.Schemas.AvistaFaultEnvelope" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgFault" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="d6c6d9e1-25f8-47f9-8e4d-8e62d17f5fd3" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="1d7d6640-9dfd-4726-a8c2-6103c2086378" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="40.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveEsbFaultPort" />
+                    <om:Property Name="MessageName" Value="msgFaultIn" />
+                    <om:Property Name="OperationName" Value="OpsReceiveEsbFault" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_msgFaultIn" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="9e3902da-e22c-4218-b96f-3508079f1326" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ErrorType" />
+                        <om:Property Name="RHS" Value="&quot;&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="NotEquals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="8cf5403c-d437-494e-adcd-c56bc11a11ea" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="42.1">
+                    <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;***********FAULT HANDLER STARTED***********&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Debug" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Scope" OID="e432cf08-8540-43af-9231-7ba4904405ed" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="147.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Handle Exception" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Scope" OID="e1ae2653-c60a-4132-bad5-85a86dbb0415" ParentLink="ComplexStatement_Statement" LowerBound="47.1" HigherBound="66.1">
+                        <om:Property Name="InitializedTransactionType" Value="True" />
+                        <om:Property Name="IsSynchronized" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="RetriveMessageType" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="2d9eebe6-fa20-48af-bf5d-8021c2b49c6f" ParentLink="ComplexStatement_Statement" LowerBound="52.1" HigherBound="55.1">
+                            <om:Property Name="Expression" Value="xmlDoc = msgFaultIn;&#xD;&#xA;btsMsgType = xmlDoc.DocumentElement.NamespaceURI+&quot;#&quot;+xmlDoc.DocumentElement.LocalName;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="GetMessageType" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Catch" OID="b002d529-a863-4abb-8332-32006865ac7a" ParentLink="Scope_Catch" LowerBound="58.1" HigherBound="64.1">
+                            <om:Property Name="ExceptionName" Value="ex" />
+                            <om:Property Name="ExceptionType" Value="System.Exception" />
+                            <om:Property Name="IsFaultMessage" Value="False" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CatchException" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="VariableAssignment" OID="dde2cce3-3f75-463b-86bb-93d0e4bb23d9" ParentLink="Catch_Statement" LowerBound="61.1" HigherBound="63.1">
+                                <om:Property Name="Expression" Value="btsMsgType =&quot;Unknown&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Set MsgType to Unknown" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Decision" OID="b71e16bf-ed28-48aa-8ace-116314a1e19b" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="85.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="What type of Fault is?" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="aecc15f4-b8d8-49fc-aa33-cfe04105c07d" ParentLink="ReallyComplexStatement_Branch" LowerBound="67.21" HigherBound="73.1">
+                            <om:Property Name="Expression" Value="btsMsgType ==&quot;http://Avista.ESB.Schemas/exceptionhandling#FaultEnvelope&quot; &amp;&amp; msgFaultIn(ErrorReport.ErrorType) ==&quot;SoapException&quot;" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="AvistaFaultEnvelope with SOAPFault" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="47ac2a2d-c373-4736-88ee-b0007d1dc780" ParentLink="ComplexStatement_Statement" LowerBound="70.1" HigherBound="72.1">
+                                <om:Property Name="Expression" Value="Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.HandleFault(msgFaultIn, btsMsgType, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SoapException);&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Handle Soap Fault" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="d946383f-3896-48cf-b2c6-55f1a0fba70f" ParentLink="ReallyComplexStatement_Branch" LowerBound="73.26" HigherBound="80.1">
+                            <om:Property Name="Expression" Value="btsMsgType ==&quot;http://Avista.ESB.Schemas/exceptionhandling#FaultEnvelope&quot; &amp;&amp; msgFaultIn(ErrorReport.ErrorType) ==&quot;SystemException&quot;" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="AvistaFaultEnvelope with Exception" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="5e82c336-34fd-4723-a4f3-2ba2210659a3" ParentLink="ComplexStatement_Statement" LowerBound="76.1" HigherBound="79.1">
+                                <om:Property Name="Expression" Value="Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.HandleFault(msgFaultIn, btsMsgType, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SystemException);&#xD;&#xA;&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Handle Exceptions" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="35bfd8f1-bb53-44cc-a286-3216b9db0189" ParentLink="ReallyComplexStatement_Branch" LowerBound="80.26" HigherBound="85.1">
+                            <om:Property Name="Expression" Value="msgFaultIn(ErrorReport.ErrorType) ==&quot;FailedMessage&quot;" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Routing Failure" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="dc40e80a-588b-4a83-9f30-5f855768195e" ParentLink="ComplexStatement_Statement" LowerBound="82.1" HigherBound="84.1">
+                                <om:Property Name="Expression" Value="Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.HandleFault(msgFaultIn, btsMsgType, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.DeliveryException);" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Handle Routing Failure" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="344eb354-11a3-486f-850c-2d5cbdf645d5" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Decision" OID="69077aaf-0df0-41df-bc5f-d331f38c2f71" ParentLink="ComplexStatement_Statement" LowerBound="85.1" HigherBound="136.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Is Avista Fault Message?" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="06eb5009-4f83-4929-8d95-d476fd124cf7" ParentLink="ReallyComplexStatement_Branch" LowerBound="86.21" HigherBound="108.1">
+                            <om:Property Name="Expression" Value="btsMsgType ==&quot;http://Avista.ESB.Schemas/exceptionhandling#FaultEnvelope&quot;" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Yes" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="VariableAssignment" OID="a6cb264e-c2cb-4b3a-9247-e0089474a09f" ParentLink="ComplexStatement_Statement" LowerBound="89.1" HigherBound="91.1">
+                                <om:Property Name="Expression" Value="archiveTagName =xpath(msgFaultIn, &quot;string(//ArchiveTag)&quot;);" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="archiveTagName" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="Decision" OID="91aeab78-04bb-44f8-a763-ba13491e983a" ParentLink="ComplexStatement_Statement" LowerBound="91.1" HigherBound="107.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Does Archive Required?" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="DecisionBranch" OID="34affb91-a9af-47c7-b1ee-7b3c6b7c3167" ParentLink="ReallyComplexStatement_Branch" LowerBound="92.25" HigherBound="107.1">
+                                    <om:Property Name="Expression" Value="!System.String.IsNullOrWhiteSpace(archiveTagName)" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Yes" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Construct" OID="1a985326-b07a-4b18-b297-4d9c9ba0c8c9" ParentLink="ComplexStatement_Statement" LowerBound="94.1" HigherBound="104.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructFaultSectionMsg" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessageAssignment" OID="37881a6e-9032-4a8d-949a-896bb2613a75" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="103.1">
+                                            <om:Property Name="Expression" Value="errXmlDoc = new System.Xml.XmlDocument();&#xD;&#xA;errXmlDoc = xpath(msgFaultIn, &quot;//FaultMsgBody/*&quot;);&#xD;&#xA;&#xD;&#xA;msgFault = errXmlDoc;&#xD;&#xA;msgFault(*) = msgFaultIn(*);" />
+                                            <om:Property Name="ReportToAnalyst" Value="False" />
+                                            <om:Property Name="Name" Value="msgFaultSection" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="848ad6e5-666c-49cc-8e59-1ebe1204beb5" ParentLink="Construct_MessageRef" LowerBound="95.39" HigherBound="95.47">
+                                            <om:Property Name="Ref" Value="msgFault" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="VariableAssignment" OID="7d8a0baf-e5f0-4197-8b23-77d18298765d" ParentLink="ComplexStatement_Statement" LowerBound="104.1" HigherBound="106.1">
+                                        <om:Property Name="Expression" Value="archiveManager.ArchiveMessage(msgFault, 0, true, archiveTagName +&quot;|Error|||Fault message&quot;, true);&#xD;&#xA;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Archive" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="921e4893-bcd3-4f49-a316-e5ad8a260475" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="bbeb51b3-3e7f-4512-b927-cb392a54b51a" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Decision" OID="c8a19227-2556-4d7d-b8f2-5f5702e59375" ParentLink="ComplexStatement_Statement" LowerBound="110.1" HigherBound="135.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Is TwoWay?" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="DecisionBranch" OID="bd538861-ad8a-40f3-beb3-22c29551b55a" ParentLink="ReallyComplexStatement_Branch" LowerBound="111.25" HigherBound="114.1">
+                                    <om:Property Name="Expression" Value="ErrorReport.SendPortName exists msgFaultIn" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Yes" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="ee8c8615-a336-4001-8706-af68f12629b0" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="Construct" OID="94254a2f-5a42-4b01-aff6-00e780b75e0a" ParentLink="ComplexStatement_Statement" LowerBound="116.1" HigherBound="132.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructFaultSectionMsg" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessageAssignment" OID="230b9948-f765-46ec-88a6-b72bd4be092d" ParentLink="ComplexStatement_Statement" LowerBound="119.1" HigherBound="131.1">
+                                            <om:Property Name="Expression" Value="// Set Fault Message Properties&#xD;&#xA;description=msgFaultIn(ErrorReport.Description);&#xD;&#xA;&#xD;&#xA;exception = new System.Exception(description);&#xD;&#xA;&#xD;&#xA;receivePort=msgFaultIn(ErrorReport.ReceivePortName);&#xD;&#xA;sourceSystem = receivePort.Substring(receivePort.IndexOf(&quot;.&quot;, receivePort.IndexOf(&quot;.&quot;) + 1) + 1, (receivePort.LastIndexOf(&quot;.&quot;) - receivePort.IndexOf(&quot;.&quot;, receivePort.IndexOf(&quot;.&quot;) + 1))-1);&#xD;&#xA;&#xD;&#xA;msgFault  = Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.CreateFaultMessage(exception, msgFaultIn, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.DeliveryException);&#xD;&#xA;msgFault.ServiceName = receivePort;&#xD;&#xA;msgFault(BTS.InterchangeID)=msgFaultIn(BTS.InterchangeID);" />
+                                            <om:Property Name="ReportToAnalyst" Value="False" />
+                                            <om:Property Name="Name" Value="msgFaultSection" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="e7d4d35b-20dc-4d3b-bf98-27248d1cbc35" ParentLink="Construct_MessageRef" LowerBound="117.39" HigherBound="117.47">
+                                            <om:Property Name="Ref" Value="msgFault" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="VariableAssignment" OID="7e7b39b0-8da0-493c-9b35-29725c68ecf7" ParentLink="ComplexStatement_Statement" LowerBound="132.1" HigherBound="134.1">
+                                        <om:Property Name="Expression" Value="archiveManager.ArchiveMessage(msgFault, 0, true,  &quot;RoutingFailed|Error|&quot;+sourceSystem+&quot;||Fault message&quot;, true);&#xD;&#xA;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Archive" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="8cc08909-ce9b-4604-bdcd-a0bd70d7d017" ParentLink="Scope_Catch" LowerBound="139.1" HigherBound="145.1">
+                        <om:Property Name="ExceptionName" Value="ex" />
+                        <om:Property Name="ExceptionType" Value="System.Exception" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CatchException" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="1e4b3135-f4e9-4977-87dd-801167074caa" ParentLink="Catch_Statement" LowerBound="142.1" HigherBound="144.1">
+                            <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteError(&quot;A Fault was encountered by BizTalk and a further error occurred while handling the fault message. &quot; + System.Environment.NewLine + ex.ToString(), 14004);" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Log Exception" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="2863a1ae-cb05-4abd-9d97-83a8ea39031c" ParentLink="ServiceBody_Statement" LowerBound="147.1" HigherBound="149.1">
+                    <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;***********FAULT HANDLER COMPLETED***********&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Debug" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="d914d1ce-3301-463a-b231-04a2ca96adc6" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Unbound" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.ReceiveEsbFaultPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveEsbFaultPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="4de19670-edf1-4c5a-a3b1-17699d76c481" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Avista.ESB.OrchestrationServices
+{
+    internal porttype ReceiveEsbFaultPortType
+    {
+        oneway OpsReceiveEsbFault
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service FaultHandler
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements ReceiveEsbFaultPortType ReceiveEsbFaultPort;
+        message System.Xml.XmlDocument msgFaultIn;
+        message Avista.ESB.Schemas.AvistaFaultEnvelope msgFault;
+        System.String btsMsgType;
+        System.Xml.XmlDocument xmlDoc;
+        System.String archiveTagName;
+        System.Xml.XmlDocument errXmlDoc;
+        Avista.ESB.Utilities.ArchiveManager archiveManager;
+        System.String description;
+        System.String receivePort;
+        System.String sourceSystem;
+        System.Exception exception;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1d7d6640-9dfd-4726-a8c2-6103c2086378")]
+            activate ((ErrorReport.ErrorType != ""))receive (ReceiveEsbFaultPort.OpsReceiveEsbFault, msgFaultIn);
+            btsMsgType = "";
+            xmlDoc = new System.Xml.XmlDocument();
+            archiveTagName = "";
+            errXmlDoc = new System.Xml.XmlDocument();
+            archiveManager = new Avista.ESB.Utilities.ArchiveManager();
+            description = "";
+            receivePort = "";
+            sourceSystem = "";
+            exception = new System.Exception();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8cf5403c-d437-494e-adcd-c56bc11a11ea")]
+            Avista.ESB.Utilities.Logging.Logger.WriteTrace("***********FAULT HANDLER STARTED***********");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e432cf08-8540-43af-9231-7ba4904405ed")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e1ae2653-c60a-4132-bad5-85a86dbb0415")]
+                    scope
+                    {
+                        body
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2d9eebe6-fa20-48af-bf5d-8021c2b49c6f")]
+                            xmlDoc = msgFaultIn;
+                            btsMsgType = xmlDoc.DocumentElement.NamespaceURI+"#"+xmlDoc.DocumentElement.LocalName;
+                        }
+                        exceptions
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b002d529-a863-4abb-8332-32006865ac7a")]
+                            catch (System.Exception ex)
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("dde2cce3-3f75-463b-86bb-93d0e4bb23d9")]
+                                btsMsgType ="Unknown";
+                            }
+                        }
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b71e16bf-ed28-48aa-8ace-116314a1e19b")]
+                    if (btsMsgType =="http://Avista.ESB.Schemas/exceptionhandling#FaultEnvelope" && msgFaultIn(ErrorReport.ErrorType) =="SoapException"
+                        )
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("47ac2a2d-c373-4736-88ee-b0007d1dc780")]
+                        Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.HandleFault(msgFaultIn, btsMsgType, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SoapException);
+                    }
+                    else if (btsMsgType =="http://Avista.ESB.Schemas/exceptionhandling#FaultEnvelope" && msgFaultIn(ErrorReport.ErrorType) =="SystemException"
+                        )
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("5e82c336-34fd-4723-a4f3-2ba2210659a3")]
+                        Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.HandleFault(msgFaultIn, btsMsgType, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SystemException);
+                        
+                    }
+                    else if (msgFaultIn(ErrorReport.ErrorType) =="FailedMessage")
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("dc40e80a-588b-4a83-9f30-5f855768195e")]
+                        Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.HandleFault(msgFaultIn, btsMsgType, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.DeliveryException);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("69077aaf-0df0-41df-bc5f-d331f38c2f71")]
+                    if (btsMsgType =="http://Avista.ESB.Schemas/exceptionhandling#FaultEnvelope"
+                        )
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("a6cb264e-c2cb-4b3a-9247-e0089474a09f")]
+                        archiveTagName =xpath(msgFaultIn, "string(//ArchiveTag)");
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("91aeab78-04bb-44f8-a763-ba13491e983a")]
+                        if (!System.String.IsNullOrWhiteSpace(archiveTagName))
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1a985326-b07a-4b18-b297-4d9c9ba0c8c9")]
+                            construct msgFault
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("37881a6e-9032-4a8d-949a-896bb2613a75")]
+                                errXmlDoc = new System.Xml.XmlDocument();
+                                errXmlDoc = xpath(msgFaultIn, "//FaultMsgBody/*");
+                                
+                                msgFault = errXmlDoc;
+                                msgFault(*) = msgFaultIn(*);
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7d8a0baf-e5f0-4197-8b23-77d18298765d")]
+                            archiveManager.ArchiveMessage(msgFault, 0, true, archiveTagName +"|Error|||Fault message", true);
+                        }
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("c8a19227-2556-4d7d-b8f2-5f5702e59375")]
+                        if (ErrorReport.SendPortName exists msgFaultIn)
+                        {
+                        }
+                        else 
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("94254a2f-5a42-4b01-aff6-00e780b75e0a")]
+                            construct msgFault
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("230b9948-f765-46ec-88a6-b72bd4be092d")]
+                                // Set Fault Message Properties
+                                description=msgFaultIn(ErrorReport.Description);
+                                
+                                exception = new System.Exception(description);
+                                
+                                receivePort=msgFaultIn(ErrorReport.ReceivePortName);
+                                sourceSystem = receivePort.Substring(receivePort.IndexOf(".", receivePort.IndexOf(".") + 1) + 1, (receivePort.LastIndexOf(".") - receivePort.IndexOf(".", receivePort.IndexOf(".") + 1))-1);
+                                
+                                msgFault  = Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.CreateFaultMessage(exception, msgFaultIn, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.DeliveryException);
+                                msgFault.ServiceName = receivePort;
+                                msgFault(BTS.InterchangeID)=msgFaultIn(BTS.InterchangeID);
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7e7b39b0-8da0-493c-9b35-29725c68ecf7")]
+                            archiveManager.ArchiveMessage(msgFault, 0, true,  "RoutingFailed|Error|"+sourceSystem+"||Fault message", true);
+                        }
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8cc08909-ce9b-4604-bdcd-a0bd70d7d017")]
+                    catch (System.Exception ex)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1e4b3135-f4e9-4977-87dd-801167074caa")]
+                        Avista.ESB.Utilities.Logging.Logger.WriteError("A Fault was encountered by BizTalk and a further error occurred while handling the fault message. " + System.Environment.NewLine + ex.ToString(), 14004);
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2863a1ae-cb05-4abd-9d97-83a8ea39031c")]
+            Avista.ESB.Utilities.Logging.Logger.WriteTrace("***********FAULT HANDLER COMPLETED***********");
+        }
+    }
+}
+

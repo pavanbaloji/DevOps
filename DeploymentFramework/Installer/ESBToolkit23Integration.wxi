@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Deployment Framework for BizTalk
+    Copyright (C) 2008-14 Thomas F. Abraham, 2004-08 Scott Colestock
+    
+    This source file is subject to the Microsoft Public License (Ms-PL).
+-->
+<Include xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Fragment>
+    <Feature Id="EsbToolkit23IntegrationFeature" Title="ESB Toolkit Integration" Level="1" InstallDefault="local" Display="51"
+             AllowAdvertise="no" TypicalDefault="install" Description="Extends the BizTalk ESB Toolkit with a custom SSO resolver">
+      <Condition Level="0">
+        <![CDATA[(NOT ESBTOOLKIT23_DIR) OR (BTS_PRODUCTNAME <> "Microsoft BizTalk Server 2013 R2")]]>
+      </Condition>
+    </Feature>
+
+    <PropertyRef Id="VS2013_EXTENSIONS_DIR" />
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="ProgramFilesFolder">
+      <Directory Id="ESBTOOLKIT23_DIR" Name="EsbToolkitDir23" />
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="ProgramFilesFolder">
+      <Directory Id="VS2013_EXTENSIONS_DIR" Name="VS12.0Extensions" />
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="VS2013_EXTENSIONS_DIR">
+      <Directory Id="EsbToolkitDslPackageDir23" Name="Microsoft.Practices.Services.Itinerary.DslPackage" />
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="EsbToolkitDslPackageDir23">
+      <Directory Id="EsbToolkitDslPackageLibDir23" Name="Lib" />
+    </DirectoryRef>
+  </Fragment>
+</Include>

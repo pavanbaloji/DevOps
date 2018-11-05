@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="NoBindings" BoundEndpoints="0" TotalEndpoints="0">
+  <Timestamp>2018-09-24T12:08:23.6266882-07:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:Avista.ESB]" Version="" Culture="" PublicKeyToken="" FullName="[Application:Avista.ESB], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_MessageProperty" RootName="Insert" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_MessageProperty,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_MessageProperty" RootName="InsertResponse" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_MessageProperty,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_Message" RootName="Insert" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_Message,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_Message" RootName="InsertResponse" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_Message,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="ArrayOfMessage" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="ArrayOfMessageProperty" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="ArrayOfPart" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="ArrayOfPartProperty" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="Message" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="MessageProperty" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="Part" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_dbo" RootName="PartProperty" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_dbo,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.SimpleTypeArray" RootName="ArrayOflong" AssemblyQualifiedName="Avista.ESB.Schemas.SimpleTypeArray,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_PartProperty" RootName="Insert" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_PartProperty,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_PartProperty" RootName="InsertResponse" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_PartProperty,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_Part" RootName="Insert" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_Part,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_Part" RootName="InsertResponse" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_Part,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.AvistaFaultEnvelope" RootName="FaultEnvelope" AssemblyQualifiedName="Avista.ESB.Schemas.AvistaFaultEnvelope,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.EmailNotification" RootName="EmailNotification" AssemblyQualifiedName="Avista.ESB.Schemas.EmailNotification,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="anyType" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="anyURI" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="base64Binary" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="boolean" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="byte" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="char" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="dateTime" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="decimal" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="double" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="duration" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="float" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="guid" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="int" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="long" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="QName" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="short" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="string" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="unsignedByte" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="unsignedInt" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="unsignedLong" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Serialization" RootName="unsignedShort" AssemblyQualifiedName="Avista.ESB.Schemas.Serialization,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.MessageArchive_BulkInsert" RootName="Request" AssemblyQualifiedName="Avista.ESB.Schemas.MessageArchive_BulkInsert,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Index" RootName="Index" AssemblyQualifiedName="Avista.ESB.Schemas.Index,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Avista.ESB.Schemas.Html" RootName="html" AssemblyQualifiedName="Avista.ESB.Schemas.Html,Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="Avista.ESB.Pipelines" Version="1.0.0.0" Culture="neutral" PublicKeyToken="332865bfda7726c3" FullName="Avista.ESB.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="Avista.ESB.Schemas" Version="1.0.0.0" Culture="neutral" PublicKeyToken="332865bfda7726c3" FullName="Avista.ESB.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="Avista.ESB.Maps" Version="1.0.0.0" Culture="neutral" PublicKeyToken="332865bfda7726c3" FullName="Avista.ESB.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="Avista.ESB.OrchestrationServices" Version="1.0.0.0" Culture="neutral" PublicKeyToken="332865bfda7726c3" FullName="Avista.ESB.OrchestrationServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=332865bfda7726c3">
+      <Services>
+        <Service Name="Avista.ESB.OrchestrationServices.RoutingService" State="Started" TrackingOption="${ServiceTrackingOption}" Description="">
+          <Ports />
+          <Roles />
+          <Host Name="BizTalkServerGenericHost" NTGroupName="${BizTalkServerHostGroup}" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="Avista.ESB.OrchestrationServices.FaultHandler" State="Started" TrackingOption="${ServiceTrackingOption}" Description="">
+          <Ports />
+          <Roles />
+          <Host Name="BizTalkServerGenericHost" NTGroupName="${BizTalkServerHostGroup}" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="Avista.ESB.OrchestrationServices.BrokerService" State="Started" TrackingOption="${ServiceTrackingOption}" Description="">
+          <Ports />
+          <Roles />
+          <Host Name="BizTalkServerGenericHost" NTGroupName="${BizTalkServerHostGroup}" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="Avista.ESB.OrchestrationServices.MessageSink" State="Started" TrackingOption="${ServiceTrackingOption}" Description="">
+          <Ports />
+          <Roles />
+          <Host Name="BizTalkServerGenericHost" NTGroupName="${BizTalkServerHostGroup}" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="Avista.ESB.OrchestrationServices.SelectItineraryService" State="Started" TrackingOption="${ServiceTrackingOption}" Description="">
+          <Ports />
+          <Roles />
+          <Host Name="BizTalkServerGenericHost" NTGroupName="${BizTalkServerHostGroup}" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="Avista.ESB.OrchestrationServices.ArchiveMessage" State="Started" TrackingOption="${ServiceTrackingOption}" Description="">
+          <Ports />
+          <Roles />
+          <Host Name="BizTalkServerGenericHost" NTGroupName="${BizTalkServerHostGroup}" Type="1" Trusted="false" />
+        </Service>
+      </Services>
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection>
+    <SendPort Name="Avista.ESB.spArchives" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
+      <PrimaryTransport>
+        <Address>mssql://${BizTalkDbServer}//MessageArchive?</Address>
+        <TransportType Name="WCF-SQL" Capabilities="779" ConfigurationClsid="59b35d03-6a06-4734-a249-ef561254ecf7" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;BindingType vt="8"&gt;sqlBinding&lt;/BindingType&gt;&lt;BindingConfiguration vt="8"&gt;&amp;lt;binding name="sqlBinding" /&amp;gt;&lt;/BindingConfiguration&gt;&lt;InboundBodyPathExpression vt="8" /&gt;&lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;&lt;AffiliateApplicationName vt="8" /&gt;&lt;StaticAction vt="8"&gt;CompositeOperation&lt;/StaticAction&gt;&lt;ProxyUserName vt="8" /&gt;&lt;ProxyAddress vt="8" /&gt;&lt;UserName vt="8" /&gt;&lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;&lt;EndpointBehaviorConfiguration vt="8"&gt;&amp;lt;behavior name="EndpointBehavior" /&amp;gt;&lt;/EndpointBehaviorConfiguration&gt;&lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;&lt;PropagateFaultMessage vt="11"&gt;-1&lt;/PropagateFaultMessage&gt;&lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;&lt;IsolationLevel vt="8"&gt;Serializable&lt;/IsolationLevel&gt;&lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;&lt;EnableTransaction vt="11"&gt;-1&lt;/EnableTransaction&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>15</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2018-05-18T07:00:00</FromTime>
+        <ToTime>2018-05-19T06:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerWcfSqlTransmitHost" HostTrusted="false">
+          <TransportType Name="WCF-SQL" Capabilities="779" ConfigurationClsid="59b35d03-6a06-4734-a249-ef561254ecf7" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2018-05-18T07:00:00</FromTime>
+        <ToTime>2018-05-19T06:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+        &lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+        &lt;Group&gt;
+        &lt;Statement Property="BTS.ReceivePortName" Operator="0" Value="Avista.ESB.rpArchives" /&gt;
+        &lt;/Group&gt;
+        &lt;/Filter&gt;
+      </Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>Avista.ESB</ApplicationName>
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection>
+    <ReceivePort Name="Avista.ESB.rpArchives" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="Avista.ESB.rlArchives">
+          <Description xsi:nil="true" />
+          <Address>${AvistaEsbCommonInstallationRoot}\Deployment\Ports\Archives\*.xml</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2018-05-18T07:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2018-05-19T06:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2018-05-18T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2018-05-19T00:00:00</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;RenameReceivedFiles vt="11"&gt;0&lt;/RenameReceivedFiles&gt;&lt;RemoveReceivedFileDelay vt="19"&gt;10&lt;/RemoveReceivedFileDelay&gt;&lt;RemoveReceivedFileMaxInterval vt="19"&gt;300000&lt;/RemoveReceivedFileMaxInterval&gt;&lt;FileMask vt="8"&gt;*.xml&lt;/FileMask&gt;&lt;FileNetFailRetryInt vt="19"&gt;5&lt;/FileNetFailRetryInt&gt;&lt;RemoveReceivedFileRetryCount vt="19"&gt;5&lt;/RemoveReceivedFileRetryCount&gt;&lt;BatchSizeInBytes vt="19"&gt;102400&lt;/BatchSizeInBytes&gt;&lt;PollingInterval vt="19"&gt;60000&lt;/PollingInterval&gt;&lt;FileNetFailRetryCount vt="19"&gt;5&lt;/FileNetFailRetryCount&gt;&lt;BatchSize vt="19"&gt;20&lt;/BatchSize&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="None" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerFileReceiveHost" HostTrusted="false">
+            <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>${ReceivePortTrackingOption}</Tracking>
+      <Transforms />
+      <RouteFailedMessage>true</RouteFailedMessage>
+      <ApplicationName>Avista.ESB</ApplicationName>
+    </ReceivePort>
+  </ReceivePortCollection>
+  <PartyCollection xsi:nil="true" />
+</BindingInfo>

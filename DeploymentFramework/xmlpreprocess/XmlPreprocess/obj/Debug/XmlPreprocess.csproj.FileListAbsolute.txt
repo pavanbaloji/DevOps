@@ -1,0 +1,6 @@
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\bin\Debug\XmlPreprocess.exe
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\bin\Debug\XmlPreprocess.pdb
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\bin\Debug\XmlPreprocess.xml
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\obj\Debug\XmlPreprocess.csprojResolveAssemblyReference.cache
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\obj\Debug\XmlPreprocess.exe
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\obj\Debug\XmlPreprocess.pdb

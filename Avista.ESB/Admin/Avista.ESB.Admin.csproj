@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{699566B1-3C75-4B43-8113-D663D02A36AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avista.ESB.Admin</RootNamespace>
+    <AssemblyName>Avista.ESB.Admin</AssemblyName>
+    <KeyContainerName>Avista.ESB.Common</KeyContainerName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DiffPlex, Version=1.2.0.0, Culture=neutral, PublicKeyToken=1d35e91d1bd7bc0f, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\DiffPlex.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Admin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BizTalk.ApplicationDeployment.Engine, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BizTalk.BaseFunctoids, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BizTalk.ExplorerOM, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.XLANGs.BaseTypes, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Blend\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BizTalkArtifact.cs" />
+    <Compile Include="BizTalkCatalog.cs" />
+    <Compile Include="BizTalkCollection.cs" />
+    <Compile Include="BizTalkHost.cs" />
+    <Compile Include="BizTalkHostCollection.cs" />
+    <Compile Include="BizTalkHostIntance.cs" />
+    <Compile Include="BizTalkHostIntanceCollection.cs" />
+    <Compile Include="BizTalkManager.cs" />
+    <Compile Include="BizTalkManager_Ports.cs" />
+    <Compile Include="BizTalkSettings.cs" />
+    <Compile Include="Enums\BizTalkPerfCounterServiceClass.cs" />
+    <Compile Include="Enums\DehydrationBehaviorConverter.cs" />
+    <Compile Include="Helper\BizTalkSettingsHelper.cs" />
+    <Compile Include="HostType.cs" />
+    <Compile Include="HostTypeConverter.cs" />
+    <Compile Include="ICollectionWrapper.cs" />
+    <Compile Include="OrchStatus.cs" />
+    <Compile Include="PortStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceConverter.cs" />
+    <Compile Include="ServiceStatus.cs" />
+    <Compile Include="Settings\GroupSetting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\HostInstance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\HostInstanceSetting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\HostSetting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\ManagementHelper.cs" />
+    <Compile Include="Settings\PerfCounterServiceClassConverter.cs" />
+    <Compile Include="TransportPropertyNames.cs" />
+    <Compile Include="Utility\ColorConsole.cs" />
+    <Compile Include="Utility\DiffPlexUtils.cs" />
+    <Compile Include="Utility\ExternalProgram.cs" />
+    <Compile Include="Utility\OutputEventArgs.cs" />
+    <Compile Include="Utility\OutputEventHandler.cs" />
+    <Compile Include="Utility\OutputType.cs" />
+    <Compile Include="Utility\SerializableObject.cs" />
+    <Compile Include="Utility\TempFile.cs" />
+    <Compile Include="Utility\TestHelper.cs" />
+    <Compile Include="Utility\Wmi.cs" />
+    <Compile Include="Utility\WmiOperationCompletedEventHandler.cs" />
+    <Compile Include="Utility\XmlTemplate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

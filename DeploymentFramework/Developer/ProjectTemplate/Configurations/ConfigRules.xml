@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************************************** -->
+<!--  This rules file defines XPaths that the ConfigEditor will use to match elements in a configuration template    -->
+<!--  file in order to add or remove them from a target configuration file.                                          -->
+<!-- *************************************************************************************************************** -->
+<Rules>
+  <File Target="C:\Program Files (x86)\Microsoft BizTalk Server 2013 R2\BTSNTSvc.exe.config">
+    <Update Path="/configuration/connectionStrings/add" Key="@name" value="" Order="1,0,0"/>
+    <Update Path="/configuration/appSettings/add" Key="@key" Value="" Order="1,0,0" />
+  </File>
+  <File Target="C:\Program Files (x86)\Microsoft BizTalk Server 2013 R2\BTSNTSvc64.exe.config">
+    <Update Path="/configuration/connectionStrings/add" Key="@name" value="" Order="1,0,0"/>
+    <Update Path="/configuration/appSettings/add" Key="@key" Value="" Order="1,0,0" />
+  </File>
+</Rules>

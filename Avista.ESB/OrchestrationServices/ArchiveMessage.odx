@@ -1,0 +1,680 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="7c69a78b-18b6-494f-9438-510600015cba" LowerBound="1.1" HigherBound="177.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Avista.ESB.OrchestrationServices" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="f7b10c61-1a52-4a13-8434-136f52d55640" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessArchiveMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="d53ec76b-caad-408f-9531-76d6d259df4a" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SelectItinerary" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="db13fe68-9308-4f3e-9cb5-2c01e55b608d" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="ced2ed39-c41b-47f3-b510-3132a8cbeb3e" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="AdvanceArchiveMsgPortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="744cae3b-1a75-4d6e-8ec8-4455745800ac" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AdvanceItinerary" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="5b822e6a-7c92-4519-a861-fecdc05c119b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.43">
+                    <om:Property Name="Ref" Value="Microsoft.XLANGs.BaseTypes.Any" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b3e3c1f4-3f98-43b7-abc8-6ac929d8fb79" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SubmitArchiveFaultPortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="26dee201-e9b8-4ffe-8b6d-01ef680bc16e" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitFault" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="044742b1-f168-4082-a031-22aeb9a53626" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.51">
+                    <om:Property Name="Ref" Value="Avista.ESB.Schemas.AvistaFaultEnvelope" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="04cbbb5e-4641-4cd5-8017-8beba9ce8c21" ParentLink="Module_ServiceDeclaration" LowerBound="33.1" HigherBound="176.1">
+            <om:Property Name="InitializedTransactionType" Value="True" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ArchiveMessage" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="d8996353-b5c5-47b5-9fd1-fd0af7450a2e" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="Microsoft.Practices.ESB.Resolver.ResolverDictionary" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="resolverDictionary" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1011b55b-9572-4396-adb8-4db04ef2787b" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Microsoft.Practices.ESB.Itinerary.SerializableItineraryStepWrapper" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="itineraryStep" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f253fbc9-5702-4a96-9843-b67e8f30a516" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="resolver" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="739fbfe4-cf4f-45bb-9512-1902be5d4a76" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="50.1" HigherBound="51.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Microsoft.Practices.ESB.Itinerary.ResolverCollection" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="resolvers" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="01161a89-df06-483c-abb9-34b5ce9b168a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="51.1" HigherBound="52.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Microsoft.Practices.ESB.Itinerary.SerializableItineraryWrapper" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="itinerary" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="82063f68-fa8a-47b1-97f7-1b36fe046f05" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="52.1" HigherBound="53.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="includeProperties" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="d015eabf-89a2-4385-84ef-074c61f3d30e" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="53.1" HigherBound="54.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="expiryMinutes" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="90c8198f-9122-49ab-a131-5038b1dde6d3" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="54.1" HigherBound="55.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="tag" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="d14aa1e2-91c6-4351-a6d4-05823327c2bc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="55.1" HigherBound="56.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="hasMoreSteps" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="68c1c5d1-c2ca-483c-ba7e-3f094646659e" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="56.1" HigherBound="57.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="messageId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="LongRunningTransaction" OID="71c40192-02d7-4a3d-a71f-895fe861f43c" ParentLink="ServiceDeclaration_Transaction" LowerBound="34.21" HigherBound="34.95">
+                <om:Property Name="TimeoutExpression" Value="new System.TimeSpan(1,0,0)" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SelectItineraryTransaction" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="CorrelationDeclaration" OID="9c02a6a5-72a4-4eda-9cfc-d61afd7e8174" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.MessageArchiveAdvance" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="itineraryAdvance" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="59837221-dd58-4f71-91fc-93954faa391c" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="147.87" HigherBound="147.114">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="5ec65c69-5ce7-45fc-83bf-c5305e3cde82" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="CorrelationDeclaration" OID="586a2e9d-66e0-4922-9a2d-1556925054b3" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.MessageArchiveFault" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitFaultCorrSet" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="652dab90-2723-44d2-bdbf-b2fd4fc3127f" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="168.81" HigherBound="168.110">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="5c9802b7-95b4-4ad4-aa8f-24ad096136fd" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_3" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4bd47d13-1ab1-40d0-829d-fe6aa1589785" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="Type" Value="Avista.ESB.Schemas.AvistaFaultEnvelope" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FaultMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c780318a-4fce-42f2-bca9-e1d02c5e7c2b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InboundMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="410cd57c-dd1a-4358-85cb-5263ea1c99c2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="Type" Value="Microsoft.XLANGs.BaseTypes.Any" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OutboundMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="c1834399-fee0-4539-998b-4b35cb7b3768" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="e6c6b1f4-9bc4-4ddc-8be0-0eb5ecefbdc2" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="69.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="DocumentProcessing" />
+                    <om:Property Name="MessageName" Value="InboundMessage" />
+                    <om:Property Name="OperationName" Value="SelectItinerary" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive Msg" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="8727b1ca-fc56-4301-9a9a-58b48a996327" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceName" />
+                        <om:Property Name="RHS" Value="&quot;Avista.ESB.Common.ArchiveMessage&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="3648a8b6-9ff7-4d24-9493-3b9b2c896de5" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceState" />
+                        <om:Property Name="RHS" Value="&quot;Pending&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="013a6d22-266f-4653-a4a3-10cb615b4c47" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceType" />
+                        <om:Property Name="RHS" Value="&quot;Orchestration&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="7171d806-6f37-4c34-8adc-36f19a268bb9" ParentLink="ServiceBody_Statement" LowerBound="69.1" HigherBound="172.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Get Itinerary and Resolve" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="LongRunningTransaction" OID="00d5b3f4-230d-4808-a99c-c9ed33d2b5a5" ParentLink="Scope_Transaction" LowerBound="70.18" HigherBound="70.56">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transaction_2" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="VariableAssignment" OID="977bda3d-4f13-4109-914d-4607b4e1bee9" ParentLink="ComplexStatement_Statement" LowerBound="74.1" HigherBound="86.1">
+                        <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;******Orchestration ArchiveMessage Started******&quot;);&#xD;&#xA;&#xD;&#xA;// Retrieve the current itinerary step&#xD;&#xA;itinerary = new Microsoft.Practices.ESB.Itinerary.SerializableItineraryWrapper();&#xD;&#xA;itineraryStep = new Microsoft.Practices.ESB.Itinerary.SerializableItineraryStepWrapper();&#xD;&#xA;&#xD;&#xA;itinerary.Itinerary = Microsoft.Practices.ESB.Itinerary.ItineraryOMFactory.Create(InboundMessage);&#xD;&#xA;itineraryStep.ItineraryStep = itinerary.Itinerary.GetItineraryStep(InboundMessage);&#xD;&#xA;&#xD;&#xA;//Retrieve the Resolvers associated with the itinerar&#xD;&#xA;resolvers = itineraryStep.ItineraryStep.ResolverCollection;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Get Current Itinerary" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="56b10bd6-1aa7-458b-9f5d-156c531b0a0d" ParentLink="ComplexStatement_Statement" LowerBound="86.1" HigherBound="128.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Resolvers Returned?" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="102b9d9a-807c-4e82-90a3-af09597be8cf" ParentLink="ReallyComplexStatement_Branch" LowerBound="87.21" HigherBound="122.1">
+                            <om:Property Name="Expression" Value="resolvers.Count &gt; 0" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Yes" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Scope" OID="c3698439-1a44-453b-a5f0-9394777cf78e" ParentLink="ComplexStatement_Statement" LowerBound="89.1" HigherBound="121.1">
+                                <om:Property Name="InitializedTransactionType" Value="True" />
+                                <om:Property Name="IsSynchronized" Value="False" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Validate Resolution Properties" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableDeclaration" OID="814ba949-b6ce-4fda-beef-bb0d4d11c6b2" ParentLink="Scope_VariableDeclaration" LowerBound="93.1" HigherBound="94.1">
+                                    <om:Property Name="UseDefaultConstructor" Value="True" />
+                                    <om:Property Name="Type" Value="Avista.ESB.Utilities.ArchiveManager" />
+                                    <om:Property Name="ParamDirection" Value="In" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="archiveManager" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="LongRunningTransaction" OID="cdcd9476-4148-443d-afc2-767ab660c3f8" ParentLink="Scope_Transaction" LowerBound="90.30" HigherBound="90.68">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Transaction_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="848e341c-3ba6-4615-b40f-e22abf8e22d3" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="116.1">
+                                    <om:Property Name="Expression" Value="resolvers.MoveNext();&#xD;&#xA;&#xD;&#xA;// Move to retrieve first resolver&#xD;&#xA;resolver = resolvers.Current;&#xD;&#xA;&#xD;&#xA;Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;        Resolver : &quot; + resolver);&#xD;&#xA;Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;        Resolution structure&quot;);&#xD;&#xA;&#xD;&#xA;// Pass the resolver configuration to the Resolver mgr for resolution&#xD;&#xA;resolverDictionary = Microsoft.Practices.ESB.Resolver.ResolverMgr.Resolve(InboundMessage, resolver);&#xD;&#xA;&#xD;&#xA;expiryMinutes = System.Convert.ToInt32(resolverDictionary.Item(&quot;Archive.ExpiryMinutes&quot;));&#xD;&#xA;includeProperties = System.Convert.ToBoolean(resolverDictionary.Item(&quot;Archive.IncludeProperties&quot;));&#xD;&#xA;tag = resolverDictionary.Item(&quot;Archive.Tag&quot;);&#xD;&#xA;&#xD;&#xA;Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;            resolution.ExpiryMinutes: &quot; + expiryMinutes.ToString());&#xD;&#xA;Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;            resolution.IncludeProperties: &quot; + includeProperties.ToString());&#xD;&#xA;Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;            resolution.ArchiveTag: &quot; + tag);" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Resolve" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="63ee800b-6414-4ae5-b516-938f329591aa" ParentLink="ComplexStatement_Statement" LowerBound="116.1" HigherBound="119.1">
+                                    <om:Property Name="Expression" Value="messageId = archiveManager.ArchiveMessage(InboundMessage, expiryMinutes, includeProperties, tag, true);&#xD;&#xA;Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;Message Id: '&quot; + messageId +&quot;' has been archived.&quot;);&#xD;&#xA;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Archive" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="MessageDeclaration" OID="adb617e1-0adb-42af-a4e7-ebf539ea6537" ParentLink="Scope_MessageDeclaration" LowerBound="92.1" HigherBound="93.1">
+                                    <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                    <om:Property Name="ParamDirection" Value="In" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="DeliveryMessage" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="4ba308cf-7339-489d-a61f-208fb9dbef29" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="796a24a6-a5c3-4b36-b6dc-477eee96e336" ParentLink="ComplexStatement_Statement" LowerBound="124.1" HigherBound="127.1">
+                                <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;There were no resolvers associated with this service config.&quot;);&#xD;&#xA;throw new System.ApplicationException(&quot;There were no resolvers associated with this service config.&quot;);" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Throw Exception" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Construct" OID="de93a6a9-ee5a-4ca4-b4a7-41805e97d9b1" ParentLink="ComplexStatement_Statement" LowerBound="128.1" HigherBound="143.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct Outbound Message" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessageAssignment" OID="542f7614-0bbf-49c4-ad9e-799d0f2d65e3" ParentLink="ComplexStatement_Statement" LowerBound="131.1" HigherBound="142.1">
+                            <om:Property Name="Expression" Value="// Copy context and advance itinerary&#xD;&#xA;OutboundMessage = InboundMessage;&#xD;&#xA;OutboundMessage(*) = InboundMessage(*);&#xD;&#xA;&#xD;&#xA;// Call the Itinerary helper to advance to the next step&#xD;&#xA;itinerary.Itinerary.Advance(OutboundMessage, itineraryStep.ItineraryStep);&#xD;&#xA;itinerary.Itinerary.Write(OutboundMessage);&#xD;&#xA;&#xD;&#xA;// Call the Itinerary helper to advance to the next step&#xD;&#xA;hasMoreSteps = itinerary.Itinerary.HasNextService();" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="Set Advance Itinerary Failure Message" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="2bb41a1e-1988-43a7-a070-1c7eeb2d14f7" ParentLink="Construct_MessageRef" LowerBound="129.31" HigherBound="129.46">
+                            <om:Property Name="Ref" Value="OutboundMessage" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Decision" OID="5ceee8fe-db4c-4571-8451-0b2c89982437" ParentLink="ComplexStatement_Statement" LowerBound="143.1" HigherBound="149.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="More Itinerary Steps?" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="70b05c16-a974-44e6-b424-916c1a36564a" ParentLink="ReallyComplexStatement_Branch" LowerBound="144.21" HigherBound="149.1">
+                            <om:Property Name="Expression" Value="hasMoreSteps" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Yes" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Send" OID="5ec65c69-5ce7-45fc-83bf-c5305e3cde82" ParentLink="ComplexStatement_Statement" LowerBound="146.1" HigherBound="148.1">
+                                <om:Property Name="PortName" Value="AdvanceItineraryPort" />
+                                <om:Property Name="MessageName" Value="OutboundMessage" />
+                                <om:Property Name="OperationName" Value="AdvanceItinerary" />
+                                <om:Property Name="OperationMessageName" Value="Request" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Send Message" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="8fe8c1db-6a4d-4bec-bb97-2452ab0f5178" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="5ed792d7-a351-4020-a23a-dd23618f8792" ParentLink="Scope_Catch" LowerBound="152.1" HigherBound="170.1">
+                        <om:Property Name="ExceptionName" Value="ex" />
+                        <om:Property Name="ExceptionType" Value="System.Exception" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Catch Routing Resolution Exceptions" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="723ad15c-5287-4179-8f1f-cc878ee51a20" ParentLink="Catch_Statement" LowerBound="155.1" HigherBound="167.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct SelelectItinerary and Resolutoin Fault Message" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="079723c7-5b13-43de-860e-653f970030f2" ParentLink="ComplexStatement_Statement" LowerBound="158.1" HigherBound="166.1">
+                                <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;Exception Occured in ArchiveMessage Service. Error Details: &quot; + ex.ToString());&#xD;&#xA;&#xD;&#xA;FaultMessage = Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.CreateFaultMessage(ex, InboundMessage, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SystemException);&#xD;&#xA;&#xD;&#xA;// Set Fault Message Properties&#xD;&#xA;FaultMessage.ErrorType = &quot;SystemException&quot;;&#xD;&#xA;&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Set Routing and Resolutoin Fault Message" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="2e9975f3-f7a9-4301-8792-1031cec318d0" ParentLink="Construct_MessageRef" LowerBound="156.35" HigherBound="156.47">
+                                <om:Property Name="Ref" Value="FaultMessage" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="5c9802b7-95b4-4ad4-aa8f-24ad096136fd" ParentLink="Catch_Statement" LowerBound="167.1" HigherBound="169.1">
+                            <om:Property Name="PortName" Value="SubmitFaultMessagePort" />
+                            <om:Property Name="MessageName" Value="FaultMessage" />
+                            <om:Property Name="OperationName" Value="SubmitFault" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SendFaultMessage" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="d378c08e-e27c-48d7-83ee-74c16c80fcf1" ParentLink="ServiceBody_Statement" LowerBound="172.1" HigherBound="174.1">
+                    <om:Property Name="Expression" Value="Avista.ESB.Utilities.Logging.Logger.WriteTrace(&quot;******Orchestration ArchiveMessage Completed******&quot;);&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Debug" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="9e4098a6-0515-45f1-aa92-b2c28ce25165" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="36.1" HigherBound="38.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.ProcessArchiveMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DocumentProcessing" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="2681ddde-b731-4563-a568-e44dfcb71ee5" ParentLink="PortDeclaration_CLRAttribute" LowerBound="36.1" HigherBound="37.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="dd5bc11f-391a-43d6-8e5e-df6d67ad58f9" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="38.1" HigherBound="40.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="101" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.SubmitArchiveFaultPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitFaultMessagePort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="9d57b130-88f1-4600-9372-446d844d6817" ParentLink="PortDeclaration_CLRAttribute" LowerBound="38.1" HigherBound="39.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ed46a4e1-6dbd-4ed8-9ede-458823fbded4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="40.1" HigherBound="42.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="81" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.AdvanceArchiveMsgPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AdvanceItineraryPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="9ba8dfe2-c9cb-4398-822f-a42b0cded003" ParentLink="PortDeclaration_CLRAttribute" LowerBound="40.1" HigherBound="41.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="0b5339ea-c24a-4fc4-8531-33098c0f07a8" ParentLink="Module_CorrelationType" LowerBound="25.1" HigherBound="29.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MessageArchiveFault" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="b34855d9-05d9-4319-9c1a-ed7184cc2545" ParentLink="CorrelationType_PropertyRef" LowerBound="27.9" HigherBound="27.30">
+                <om:Property Name="Ref" Value="ErrorReport.ErrorType" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="dc2ca1b9-a621-4138-837e-8b9072b24c6d" ParentLink="Module_CorrelationType" LowerBound="29.1" HigherBound="33.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="MessageArchiveAdvance" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="86d9950e-2b2c-4e6b-91f2-3b4b1d014985" ParentLink="CorrelationType_PropertyRef" LowerBound="31.9" HigherBound="31.68">
+                <om:Property Name="Ref" Value="Microsoft.Practices.ESB.Itinerary.Schemas.IsRequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="PropertyRef" OID="ebaeb18d-daf8-468c-a43a-ad8ab6b59ccd" ParentLink="CorrelationType_PropertyRef" LowerBound="31.70" HigherBound="31.123">
+                <om:Property Name="Ref" Value="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceName" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="PropertyRef" OID="331bc520-987b-4011-8b7d-836d3429a776" ParentLink="CorrelationType_PropertyRef" LowerBound="31.125" HigherBound="31.179">
+                <om:Property Name="Ref" Value="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceState" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="PropertyRef" OID="3cd38554-05b7-489e-a689-58e2cd35452c" ParentLink="CorrelationType_PropertyRef" LowerBound="31.181" HigherBound="31.234">
+                <om:Property Name="Ref" Value="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceType" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Avista.ESB.OrchestrationServices
+{
+    internal porttype ProcessArchiveMessageType
+    {
+        oneway SelectItinerary
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    internal porttype AdvanceArchiveMsgPortType
+    {
+        oneway AdvanceItinerary
+        {
+            Microsoft.XLANGs.BaseTypes.Any
+        };
+    };
+    internal porttype SubmitArchiveFaultPortType
+    {
+        oneway SubmitFault
+        {
+            Avista.ESB.Schemas.AvistaFaultEnvelope
+        };
+    };
+    internal correlationtype MessageArchiveFault
+    {
+        ErrorReport.ErrorType
+    };
+    internal correlationtype MessageArchiveAdvance
+    {
+        Microsoft.Practices.ESB.Itinerary.Schemas.IsRequestResponse, Microsoft.Practices.ESB.Itinerary.Schemas.ServiceName, Microsoft.Practices.ESB.Itinerary.Schemas.ServiceState, Microsoft.Practices.ESB.Itinerary.Schemas.ServiceType
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service longrunning transaction ArchiveMessage timeout new System.TimeSpan(1,0,0)
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements ProcessArchiveMessageType DocumentProcessing;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses SubmitArchiveFaultPortType SubmitFaultMessagePort;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses AdvanceArchiveMsgPortType AdvanceItineraryPort;
+        correlation MessageArchiveAdvance itineraryAdvance;
+        correlation MessageArchiveFault SubmitFaultCorrSet;
+        message Avista.ESB.Schemas.AvistaFaultEnvelope FaultMessage;
+        message System.Xml.XmlDocument InboundMessage;
+        message Microsoft.XLANGs.BaseTypes.Any OutboundMessage;
+        Microsoft.Practices.ESB.Resolver.ResolverDictionary resolverDictionary;
+        Microsoft.Practices.ESB.Itinerary.SerializableItineraryStepWrapper itineraryStep;
+        System.String resolver;
+        Microsoft.Practices.ESB.Itinerary.ResolverCollection resolvers;
+        Microsoft.Practices.ESB.Itinerary.SerializableItineraryWrapper itinerary;
+        System.Boolean includeProperties;
+        System.Int32 expiryMinutes;
+        System.String tag;
+        System.Boolean hasMoreSteps;
+        System.String messageId;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e6c6b1f4-9bc4-4ddc-8be0-0eb5ecefbdc2")]
+            activate ((Microsoft.Practices.ESB.Itinerary.Schemas.ServiceName == "Avista.ESB.Common.ArchiveMessage") && (Microsoft.Practices.ESB.Itinerary.Schemas.ServiceState == "Pending") && (Microsoft.Practices.ESB.Itinerary.Schemas.ServiceType == "Orchestration"))receive (DocumentProcessing.SelectItinerary, InboundMessage);
+            itineraryStep = new Microsoft.Practices.ESB.Itinerary.SerializableItineraryStepWrapper();
+            resolver = "";
+            resolvers = new Microsoft.Practices.ESB.Itinerary.ResolverCollection();
+            itinerary = new Microsoft.Practices.ESB.Itinerary.SerializableItineraryWrapper();
+            includeProperties = true;
+            tag = "";
+            hasMoreSteps = true;
+            messageId = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7171d806-6f37-4c34-8adc-36f19a268bb9")]
+            scope longrunning transaction Transaction_2
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("977bda3d-4f13-4109-914d-4607b4e1bee9")]
+                    Avista.ESB.Utilities.Logging.Logger.WriteTrace("******Orchestration ArchiveMessage Started******");
+                    
+                    // Retrieve the current itinerary step
+                    itinerary = new Microsoft.Practices.ESB.Itinerary.SerializableItineraryWrapper();
+                    itineraryStep = new Microsoft.Practices.ESB.Itinerary.SerializableItineraryStepWrapper();
+                    
+                    itinerary.Itinerary = Microsoft.Practices.ESB.Itinerary.ItineraryOMFactory.Create(InboundMessage);
+                    itineraryStep.ItineraryStep = itinerary.Itinerary.GetItineraryStep(InboundMessage);
+                    
+                    //Retrieve the Resolvers associated with the itinerar
+                    resolvers = itineraryStep.ItineraryStep.ResolverCollection;
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("56b10bd6-1aa7-458b-9f5d-156c531b0a0d")]
+                    if (resolvers.Count > 0)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("c3698439-1a44-453b-a5f0-9394777cf78e")]
+                        scope longrunning transaction Transaction_1
+                        {
+                            message System.Xml.XmlDocument DeliveryMessage;
+                            Avista.ESB.Utilities.ArchiveManager archiveManager;
+                            body
+                            {
+                                archiveManager = new Avista.ESB.Utilities.ArchiveManager();
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("848e341c-3ba6-4615-b40f-e22abf8e22d3")]
+                                resolvers.MoveNext();
+                                
+                                // Move to retrieve first resolver
+                                resolver = resolvers.Current;
+                                
+                                Avista.ESB.Utilities.Logging.Logger.WriteTrace("        Resolver : " + resolver);
+                                Avista.ESB.Utilities.Logging.Logger.WriteTrace("        Resolution structure");
+                                
+                                // Pass the resolver configuration to the Resolver mgr for resolution
+                                resolverDictionary = Microsoft.Practices.ESB.Resolver.ResolverMgr.Resolve(InboundMessage, resolver);
+                                
+                                expiryMinutes = System.Convert.ToInt32(resolverDictionary.Item("Archive.ExpiryMinutes"));
+                                includeProperties = System.Convert.ToBoolean(resolverDictionary.Item("Archive.IncludeProperties"));
+                                tag = resolverDictionary.Item("Archive.Tag");
+                                
+                                Avista.ESB.Utilities.Logging.Logger.WriteTrace("            resolution.ExpiryMinutes: " + expiryMinutes.ToString());
+                                Avista.ESB.Utilities.Logging.Logger.WriteTrace("            resolution.IncludeProperties: " + includeProperties.ToString());
+                                Avista.ESB.Utilities.Logging.Logger.WriteTrace("            resolution.ArchiveTag: " + tag);
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("63ee800b-6414-4ae5-b516-938f329591aa")]
+                                messageId = archiveManager.ArchiveMessage(InboundMessage, expiryMinutes, includeProperties, tag, true);
+                                Avista.ESB.Utilities.Logging.Logger.WriteTrace("Message Id: '" + messageId +"' has been archived.");
+                            }
+                        }
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("796a24a6-a5c3-4b36-b6dc-477eee96e336")]
+                        Avista.ESB.Utilities.Logging.Logger.WriteTrace("There were no resolvers associated with this service config.");
+                        throw new System.ApplicationException("There were no resolvers associated with this service config.");
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("de93a6a9-ee5a-4ca4-b4a7-41805e97d9b1")]
+                    construct OutboundMessage
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("542f7614-0bbf-49c4-ad9e-799d0f2d65e3")]
+                        // Copy context and advance itinerary
+                        OutboundMessage = InboundMessage;
+                        OutboundMessage(*) = InboundMessage(*);
+                        
+                        // Call the Itinerary helper to advance to the next step
+                        itinerary.Itinerary.Advance(OutboundMessage, itineraryStep.ItineraryStep);
+                        itinerary.Itinerary.Write(OutboundMessage);
+                        
+                        // Call the Itinerary helper to advance to the next step
+                        hasMoreSteps = itinerary.Itinerary.HasNextService();
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5ceee8fe-db4c-4571-8451-0b2c89982437")]
+                    if (hasMoreSteps)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("5ec65c69-5ce7-45fc-83bf-c5305e3cde82")]
+                        send (AdvanceItineraryPort.AdvanceItinerary, OutboundMessage, initialize itineraryAdvance);
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5ed792d7-a351-4020-a23a-dd23618f8792")]
+                    catch (System.Exception ex)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("723ad15c-5287-4179-8f1f-cc878ee51a20")]
+                        construct FaultMessage
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("079723c7-5b13-43de-860e-653f970030f2")]
+                            Avista.ESB.Utilities.Logging.Logger.WriteTrace("Exception Occured in ArchiveMessage Service. Error Details: " + ex.ToString());
+                            
+                            FaultMessage = Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.CreateFaultMessage(ex, InboundMessage, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SystemException);
+                            
+                            // Set Fault Message Properties
+                            FaultMessage.ErrorType = "SystemException";
+                            
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("5c9802b7-95b4-4ad4-aa8f-24ad096136fd")]
+                        send (SubmitFaultMessagePort.SubmitFault, FaultMessage, initialize SubmitFaultCorrSet);
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d378c08e-e27c-48d7-83ee-74c16c80fcf1")]
+            Avista.ESB.Utilities.Logging.Logger.WriteTrace("******Orchestration ArchiveMessage Completed******");
+        }
+    }
+}
+

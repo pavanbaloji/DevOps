@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Deployment Framework for BizTalk
+  Copyright (C) Thomas F. Abraham, Scott Colestock
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Installer" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">x86</Platform>
+    <SchemaVersion>1.0</SchemaVersion>
+    <ProjectName>Avista.ESB</ProjectName>
+    <ProjectVersion>1.0</ProjectVersion>
+    <IncludePipelines>True</IncludePipelines>
+    <IncludeComponents>True</IncludeComponents>
+    <IncludePipelineComponents>True</IncludePipelineComponents>
+    <IncludeCustomFunctoids>True</IncludeCustomFunctoids>
+    <IncludeInstallUtilForComponents>True</IncludeInstallUtilForComponents>
+    <UsingMasterBindings>True</UsingMasterBindings>
+    <RequireXmlPreprocessDirectives>False</RequireXmlPreprocessDirectives>
+    <ApplyXmlEscape>True</ApplyXmlEscape>
+	<SkipIISReset>True</SkipIISReset> <!-- By default it is false-->
+    <SkipHostInstancesRestart>True</SkipHostInstancesRestart> <!-- By default it is false-->
+	<IncludeConfigurations>True</IncludeConfigurations>
+    <IncludeSSOAffiliates>True</IncludeSSOAffiliates>
+    <IncludeSqlPackageDeployment>True</IncludeSqlPackageDeployment>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <!-- Properties related to building an MSI for server deployments -->
+    <!-- BizTalk App Version Upgrade -->
+    <!--   For each new product release to be deployed to your BizTalk servers: -->
+    <!--     1) Increment ProductVersion -->
+    <!--     2) Generate a new GUID and update ProductId with the new GUID -->
+    <!--   This allows the new MSI to automatically uninstall (not undeploy!) the old MSI and install the new one. -->
+    <ProductVersion>1.0.0</ProductVersion>
+    <ProductId>02ea8243-844b-4e72-817e-e0a917c1addf</ProductId>
+    <!-- BizTalk App Version Upgrade -->
+    <ProductName>Avista.ESB</ProductName>
+    <Manufacturer>Avista</Manufacturer>
+    <PackageDescription>Avista.ESB core components</PackageDescription>
+    <!-- NEVER change the ProductUpgradeCode. -->
+    <ProductUpgradeCode>dcd963c6-909c-44a4-ad95-77f7a2d63e14</ProductUpgradeCode>
+  </PropertyGroup>
+  <!-- Under TFS Team Build, set CustomizableOutDir property to true in TFS 2005/2008/2010 UpgradeTemplate. -->
+  <!-- With a workflow build, copy the default template then modify the MSBuild task for the solution build. Set OutDir to blank and -->
+  <!-- CommandLineArguments to String.Format("/p:SkipInvalidConfigurations=true;TeamBuildOutDir=""{0}"" {1}", BinariesDirectory, MSBuildArguments). -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DeploymentFrameworkTargetsPath>$(MSBuildExtensionsPath)\DeploymentFrameworkForBizTalk\5.0\</DeploymentFrameworkTargetsPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' == ''">bin\Debug\</OutputPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' != ''">$(TeamBuildOutDir)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DeploymentFrameworkTargetsPath>$(MSBuildExtensionsPath)\DeploymentFrameworkForBizTalk\5.0\</DeploymentFrameworkTargetsPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' == ''">bin\Release\</OutputPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' != ''">$(TeamBuildOutDir)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Server'">
+    <DeploymentFrameworkTargetsPath>Framework\</DeploymentFrameworkTargetsPath>
+    <!-- Get our PDBs into the GAC so we get file/line number information in stack traces. -->
+    <DeployPDBsToGac>false</DeployPDBsToGac>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PropsFromEnvSettings Include="BizTalkServerHostAccount;BizTalkServerIsolatedHostAccount" />
+  </ItemGroup>
+  
+  <!-- Add ESB Application Reference -->
+  <ItemGroup>
+    <AppsToReference Include="Microsoft.Practices.ESB"/>
+  </ItemGroup>
+  
+  <!--<ItemGroup>
+    <PropsFromEnvSettings Include="SsoAppUserGroup;SsoAppAdminGroup" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <SqlPackages Include="Avista.ESB.SQL.Caching.dacpac">
+      <LocationPath>..\Sql.Caching\bin\$(Configuration)</LocationPath>
+    </SqlPackages>
+    <SqlPackages Include="Avista.ESB.SQL.ExceptionArchive.dacpac">
+      <LocationPath>..\Sql.ExceptionArchive\bin\$(Configuration)</LocationPath>
+    </SqlPackages>
+  <!--<SqlPackages Include="Avista.ESB.SQL.MessageArchive.dacpac">
+      <LocationPath>..\Sql.MessageArchive\bin\$(Configuration)</LocationPath>
+    </SqlPackages>
+  <SqlPackages Include="Avista.ESB.SQL.MessageArchiveHistory.dacpac">
+      <LocationPath>..\Sql.MessageArchiveHistory\bin\$(Configuration)</LocationPath>
+    </SqlPackages>
+  <SqlPackages Include="Avista.ESB.SQL.MessageLog.dacpac">
+      <LocationPath>..\Sql.MessageLog\bin\$(Configuration)</LocationPath>
+    </SqlPackages>-->
+  </ItemGroup>
+  
+  <!--Add all referenced external dlls -->
+
+  <ItemGroup>
+    <ExternalAssemblies Include="EntityFramework.dll">
+      <LocationPath>..\Lib</LocationPath>
+    </ExternalAssemblies>
+    <ExternalAssemblies Include="DiffPlex.dll">
+      <LocationPath>..\Lib</LocationPath>
+    </ExternalAssemblies>
+    <ExternalAssemblies Include="NLog.dll">
+      <LocationPath>..\Lib</LocationPath>
+    </ExternalAssemblies>
+  </ItemGroup>
+
+  
+  <!-- Add ESB Components and .net assemblies-->
+  <ItemGroup>
+    <Components Include="Avista.ESB.MessagingServices.dll">
+      <LocationPath>..\MessagingServices\bin\$(Configuration)</LocationPath>
+    </Components>
+    <Components Include="Avista.ESB.Resolvers.dll">
+      <LocationPath>..\Resolvers\bin\$(Configuration)</LocationPath>
+    </Components>
+    <Components Include="Avista.ESB.Utilities.dll">
+      <LocationPath>..\Utilities\bin\$(Configuration)</LocationPath>
+    </Components>
+    <Components Include="Avista.ESB.DataAccess.dll">
+      <LocationPath>..\DataAccess\bin\$(Configuration)</LocationPath>
+    </Components>
+    <Components Include="Avista.ESB.WcfExtensions.dll">
+      <LocationPath>..\WcfExtensions\bin\$(Configuration)</LocationPath>
+    </Components>
+  </ItemGroup>
+
+  <!--Add Pipeline Components-->
+  <ItemGroup>
+    <PipelineComponents Include="Avista.ESB.PipelineComponents.dll">
+      <LocationPath>..\PipelineComponents\bin\$(Configuration)</LocationPath>
+    </PipelineComponents>
+  </ItemGroup>
+
+  <!--Add Custom Functoids -->
+  <ItemGroup>
+    <CustomFunctoids Include="Avista.ESB.Functoids.dll">
+      <LocationPath>..\Functoids\bin\$(Configuration)</LocationPath>
+    </CustomFunctoids>
+  </ItemGroup>
+  
+  <!-- Add all Schemas-->
+  <ItemGroup>
+    <Schemas Include="Avista.ESB.Schemas.dll">
+      <LocationPath>..\Schemas\bin\$(Configuration)</LocationPath>
+    </Schemas>
+  </ItemGroup>
+
+  <!-- Add all Maps-->
+  <ItemGroup>
+    <Transforms Include="Avista.ESB.Maps.dll">
+      <LocationPath>..\Maps\bin\$(Configuration)</LocationPath>
+    </Transforms>
+  </ItemGroup>
+
+  <!-- Add all Orchestrations-->
+  <ItemGroup>
+    <Orchestrations Include="Avista.ESB.OrchestrationServices.dll">
+      <LocationPath>..\OrchestrationServices\bin\$(Configuration)</LocationPath>
+    </Orchestrations>
+  </ItemGroup>
+
+  <!-- Add all Pipelines-->
+  <ItemGroup>
+    <Pipelines Include="Avista.ESB.Pipelines.dll">
+      <LocationPath>..\Pipelines\bin\$(Configuration)</LocationPath>
+    </Pipelines>
+  </ItemGroup>
+  
+  <!-- !!! TODO !!! -->
+  <Import Project="$(DeploymentFrameworkTargetsPath)BizTalkDeploymentFramework.targets" />
+  <!--
+    The Deployment Framework automatically packages most files into the server install MSI.
+    However, if there are special folders that you need to include in the MSI, you can
+    copy them to the folder $(RedistDir) in the CustomRedist target.
+    To include individual files, add an ItemGroup with AdditionalFiles elements.
+  -->
+  <Target Name="CustomRedist">
+  </Target>
+  <Target Name="CustomPostInitialize">
+	<CreateProperty Value="$(BizTalkServerIsolatedHostAccount)" Condition="'$(BizTalkServerIsolatedHostAccount)' != ''">
+      <Output TaskParameter="Value" PropertyName="AppPoolAccount" />
+    </CreateProperty>
+	
+	<CreateProperty Value="$(BizTalkServerHostAccount)" Condition="'$(BizTalkServerHostAccount)' != ''">
+      <Output TaskParameter="Value" PropertyName="BtsHostAccount" />
+    </CreateProperty>
+       
+  </Target>
+</Project>

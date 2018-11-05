@@ -1,0 +1,9 @@
+<configuration>
+
+  <!-- #ifdef _xml_preprocess -->
+  <!-- <entry foo="${myproperty}"/> -->
+  <!-- #else -->
+  <entry foo="production_value"/>
+  <!-- #endif -->
+
+</configuration>

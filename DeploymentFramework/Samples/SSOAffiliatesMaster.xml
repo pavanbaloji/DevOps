@@ -1,0 +1,14 @@
+<SSOAffiliates>
+<Affiliate name="MaximoWebServices" type="Group" description="Affiliate used for connecting to Maximo web services." contact="SSO administrator."
+             adminGroup="{DeploymentSsoAdminGroup}"
+             userGroup="{MaximoWebServicesUsers}"
+             allowLocal="false" allowTickets="true">
+    <Mapping accounts="{MaximoWebServicesUsers}" remoteUserId="{MaximoWebServicesAccount}" remotePassword="?" />
+  </Affiliate>
+  <Affiliate name="MaximoOracleDatabase" type="Group" description="Affiliate used for connecting to Maximo Oracle Database. " contact="SSO administrator."
+           adminGroup="{DeploymentSsoAdminGroup}"
+           userGroup="{MaximoOracleDbUsers}"
+           allowLocal="false" allowTickets="true">
+    <Mapping accounts="{MaximoOracleDbUsers}" remoteUserId="{MaximoOracleDbAccount}" remotePassword="?" />
+  </Affiliate>
+</SSOAffiliates>

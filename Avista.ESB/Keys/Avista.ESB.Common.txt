@@ -1,0 +1,5 @@
+Avista.ESB.snk is the strong name key used to sign the Avista.ESB assemblies.
+
+
+The public key token for this strong name key is:
+   332865bfda7726c3

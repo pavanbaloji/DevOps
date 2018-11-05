@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F5FB928-6B9F-4ADE-892B-7C86948CA659}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avista.ESB.Extenders</RootNamespace>
+    <AssemblyName>Avista.ESB.Extenders</AssemblyName>
+    <KeyContainerName>Avista.ESB.Common</KeyContainerName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.ExplorerOM, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft BizTalk Server 2013 R2\Developer Tools\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Modeling.Common, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Modeling.ExtensionProvider, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Modeling.Services, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Services.Itinerary.Dsl, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archive\ArchiveResolverExtender.cs" />
+    <Compile Include="Archive\ArchiveResolverExtensionProvider.cs" />
+    <Compile Include="BiztalkSendPortEditor.cs" />
+    <Compile Include="Cache\CacheExtender.cs" />
+    <Compile Include="Cache\CacheExtensionProvider.cs" />
+    <Compile Include="Cache\CacheActionEditor.cs" />
+    <Compile Include="Context\BtsMessageContext.cs" />
+    <Compile Include="Context\BtsMessageContextExtensionProvider.cs" />
+    <Compile Include="Enrich\EnrichResolverExtender.cs" />
+    <Compile Include="Enrich\EnrichResolverExtensionProvider.cs" />
+    <Compile Include="FailureActionEditor.cs" />
+    <Compile Include="Manipulator\ManipulatorActionEditor.cs" />
+    <Compile Include="Manipulator\ManipulatorDataKeyEditor.cs" />
+    <Compile Include="Manipulator\ManipulatorDataEditor.cs" />
+    <Compile Include="Manipulator\ManipulatorExtender.cs" />
+    <Compile Include="Manipulator\ManipulatorExtensionProvider.cs" />
+    <Compile Include="Content\BtsMessageContent.cs" />
+    <Compile Include="Content\BtsMessageContentExtensionProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Route\RouteExtender.cs" />
+    <Compile Include="Route\RouteExtensionProvider.cs" />
+    <Compile Include="SelectItinerary\SelectItineraryResolverExtender.cs" />
+    <Compile Include="SelectItinerary\SelectItineraryResolverExtensionProvider.cs" />
+    <Compile Include="Transform\TransformExtender.cs" />
+    <Compile Include="Transform\TransformExtensionProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set ExtenderDir1=%25LOCALAPPDATA%25\Microsoft\VisualStudio\12.0\Common7\IDE\Extensions\Microsoft.Practices.Services.Itinerary.DslPackage\Lib\
+set ExtenderDir2=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft.Practices.Services.Itinerary.DslPackage\Lib\
+set ExtenderDir3=C:\Program Files (x86)\Microsoft BizTalk ESB Toolkit\Tools\Itinerary Designer\Lib\
+set ExtenderDir4=C:\Program Files (x86)\Microsoft BizTalk ESB Toolkit\Bin\
+if not exist "%25ExtenderDir1%25" mkdir "%25ExtenderDir1%25"
+if not exist "%25ExtenderDir2%25" mkdir "%25ExtenderDir2%25"
+if not exist "%25ExtenderDir3%25" mkdir "%25ExtenderDir3%25"
+if not exist "%25ExtenderDir4%25" mkdir "%25ExtenderDir4%25"
+copy $(TargetPath) "%25ExtenderDir1%25"
+copy $(TargetPath) "%25ExtenderDir2%25"
+copy $(TargetPath) "%25ExtenderDir3%25"
+copy $(TargetPath) "%25ExtenderDir4%25"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

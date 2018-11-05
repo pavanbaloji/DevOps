@@ -1,0 +1,11 @@
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\bin\Release\XmlPreprocess.exe
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\bin\Release\XmlPreprocess.pdb
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\bin\Release\XmlPreprocess.xml
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\obj\Release\XmlPreprocess.exe
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess\obj\Release\XmlPreprocess.pdb
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess\obj\Release\XmlPreprocess.exe
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess\obj\Release\XmlPreprocess.pdb
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess\bin\Release\XmlPreprocess.exe
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess\bin\Release\XmlPreprocess.pdb
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess\bin\Release\XmlPreprocess.xml
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess\obj\Release\XmlPreprocess.csprojResolveAssemblyReference.cache

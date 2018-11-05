@@ -1,0 +1,430 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="28fe6aa4-424d-4c3b-abc2-309c05528b16" LowerBound="1.1" HigherBound="108.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Avista.ESB.OrchestrationServices" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="0c2e32f5-168f-48b0-a1f0-7e2b3bc04c68" ParentLink="Module_ServiceDeclaration" LowerBound="22.1" HigherBound="107.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendEmailNotification" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="2d89f8e0-b852-48ef-ac39-2ee1b58d63b8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Avista.ESB.Utilities.OrchestrationContext" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="context" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="0df86d44-58d9-46e7-a85a-37b42fe73bfa" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Avista.ESB.Utilities.EmailNotificationSettings" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="emailNotificationSettings" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6eb203f3-d096-4902-a0b7-c540739df54d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="toEmailAddress" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="51f88d41-1405-4c0d-82b8-17ec86ab8ec9" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.ArgumentNullException" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="invalidArgumentException" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8b110620-e75d-4c3b-8b24-33d7e1ce1461" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="fromEmailAddress" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="aad7c259-7be8-4d94-996b-ddb0e95627d3" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Avista.ESB.Utilities.ArchiveManager" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HP_ArchiveManager" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="a7eb60aa-046f-42c7-94c0-882960f28abe" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="archiveResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="CorrelationDeclaration" OID="5ba3f879-2c65-44be-989e-11af38d5d781" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.PublishErrorType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PublishErrorTypeSet" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="bdb6ca02-7c58-4eed-919e-106ef1cacb5e" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="101.79" HigherBound="101.109">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="ae44537e-9aa5-454e-9b20-c61f1d38f98e" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="903d0db1-2f8e-431a-818f-f43c54c87897" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="Type" Value="Avista.ESB.Schemas.Html" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgFormattedEmail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ae516449-12b2-4db0-ac36-a249730f5ccd" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="Type" Value="Avista.ESB.Schemas.AvistaFaultEnvelope" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FaultMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="7a55402b-f9a8-4162-8cd7-e6713ff5b544" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="3c3a09f0-304b-4b31-b411-307607ee8bd0" ParentLink="ServiceBody_Declaration" LowerBound="39.15" HigherBound="39.74">
+                    <om:Property Name="Type" Value="Avista.ESB.Schemas.Html" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="msgEmailNotificationRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="8d07d2cb-64a6-4640-b544-1522000903d2" ParentLink="ServiceBody_Declaration" LowerBound="39.76" HigherBound="39.110">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="param_ToEmailAddress" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Scope" OID="dbe622c1-2070-4c80-afb0-bdf4a34203ca" ParentLink="ServiceBody_Statement" LowerBound="48.1" HigherBound="105.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MainScope" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="VariableAssignment" OID="866ceac0-9ea6-4631-abc7-8982cb8cbe3c" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="56.1">
+                        <om:Property Name="Expression" Value="msgFormattedEmail = msgEmailNotificationRequest;&#xD;&#xA;archiveResponse = HP_ArchiveManager.ArchiveMessage(msgFormattedEmail, 10040, true,&quot;SendEmailNotification|Initial|||EmailNotificationMessage&quot;, true);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Archive EmailNotificationRequest" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="VariableAssignment" OID="0bad4254-7e6e-4832-a133-3eeb63ebe5f5" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="58.1">
+                        <om:Property Name="Expression" Value="toEmailAddress = param_ToEmailAddress;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Get To_EmailAddress" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="c873731f-912a-4977-a8cf-091aafa7534e" ParentLink="ComplexStatement_Statement" LowerBound="58.1" HigherBound="86.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Decide on ToEmailAddress" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="521b21b7-e902-48ec-89c8-14852cd7823e" ParentLink="ReallyComplexStatement_Branch" LowerBound="59.21" HigherBound="64.1">
+                            <om:Property Name="Expression" Value="System.String.IsNullOrEmpty(toEmailAddress)" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Is Null or Empty" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Throw" OID="7ff32bd3-37de-4b6b-9712-ce31b729df1e" ParentLink="ComplexStatement_Statement" LowerBound="61.1" HigherBound="63.1">
+                                <om:Property Name="ThrownReference" Value="invalidArgumentException" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Throw Invalid Arg Exception" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="fef1fc76-5b68-4733-8a47-79b4367fc9ad" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="4925795b-d4a6-446a-8aed-ebfba962960b" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
+                                <om:Property Name="Expression" Value="context.Action = &quot; creating formatted email notification.&quot;;&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="SetAction" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="Construct" OID="be769839-a197-4dc6-9da7-62d2a010b63e" ParentLink="ComplexStatement_Statement" LowerBound="68.1" HigherBound="81.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Construct Formatted Email" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageRef" OID="a2430f4c-1b4c-4f8a-ada5-7d51c56ea97a" ParentLink="Construct_MessageRef" LowerBound="69.35" HigherBound="69.52">
+                                    <om:Property Name="Ref" Value="msgFormattedEmail" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessageAssignment" OID="deec2e9a-1bbf-433a-b1c4-8d82bf61ae30" ParentLink="ComplexStatement_Statement" LowerBound="71.1" HigherBound="80.1">
+                                    <om:Property Name="Expression" Value="msgFormattedEmail = msgEmailNotificationRequest;&#xD;&#xA;msgFormattedEmail(*) = msgEmailNotificationRequest(*);&#xD;&#xA;&#xD;&#xA;msgFormattedEmail(SMTP.SMTPAuthenticate) = 0;&#xD;&#xA;msgFormattedEmail(SMTP.EmailBodyTextCharset) = &quot;utf-8&quot;;&#xD;&#xA;msgFormattedEmail(Microsoft.XLANGs.BaseTypes.ContentType) = &quot;text/html&quot;;&#xD;&#xA;&#xD;&#xA;lspSendEmail(Microsoft.XLANGs.BaseTypes.Address) = &quot;mailto:&quot; + toEmailAddress;" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="MessageAssignment_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="VariableAssignment" OID="f2b667a3-b46b-445b-aeab-737c30c239ab" ParentLink="ComplexStatement_Statement" LowerBound="81.1" HigherBound="83.1">
+                                <om:Property Name="Expression" Value="context.Action = &quot; sending formatted email notification.&quot;;&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="SetAction" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="Send" OID="dbe45f1e-2962-4aea-9e52-9a55c38721e2" ParentLink="ComplexStatement_Statement" LowerBound="83.1" HigherBound="85.1">
+                                <om:Property Name="PortName" Value="lspSendEmail" />
+                                <om:Property Name="MessageName" Value="msgFormattedEmail" />
+                                <om:Property Name="OperationName" Value="SubmitNotification" />
+                                <om:Property Name="OperationMessageName" Value="Request" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Send Email" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="8e04bc95-a152-4f99-ba99-58c367e8a97a" ParentLink="Scope_Catch" LowerBound="89.1" HigherBound="103.1">
+                        <om:Property Name="ExceptionName" Value="exception" />
+                        <om:Property Name="ExceptionType" Value="System.Exception" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Catch Exception" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="2ae59535-1341-4c59-992d-3967a7d247a6" ParentLink="Catch_Statement" LowerBound="92.1" HigherBound="100.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct Routing and Resolutoin Fault Message" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="dd2131f0-ae4c-4d89-8e12-c13516140a56" ParentLink="ComplexStatement_Statement" LowerBound="95.1" HigherBound="99.1">
+                                <om:Property Name="Expression" Value="FaultMessage = Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.CreateFaultMessage(exception, msgEmailNotificationRequest, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SystemException);&#xD;&#xA;&#xD;&#xA;FaultMessage.ErrorType = &quot;SystemException&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Set Routing and Resolutoin Fault Message" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="32d97321-38dc-4a9e-8a1e-cc6c82a9d7ef" ParentLink="Construct_MessageRef" LowerBound="93.35" HigherBound="93.47">
+                                <om:Property Name="Ref" Value="FaultMessage" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="ae44537e-9aa5-454e-9b20-c61f1d38f98e" ParentLink="Catch_Statement" LowerBound="100.1" HigherBound="102.1">
+                            <om:Property Name="PortName" Value="PublishErrorPort" />
+                            <om:Property Name="MessageName" Value="FaultMessage" />
+                            <om:Property Name="OperationName" Value="OpsPublishError" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="PublishError" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="8e072514-994c-417b-9a43-d2cea457d4ea" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="25.1" HigherBound="27.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.SendEmailPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="lspSendEmail" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="2149944e-0f74-4d76-8488-d4d24509c7f6" ParentLink="PortDeclaration_CLRAttribute" LowerBound="25.1" HigherBound="26.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Avista.ESB.Pipelines.SendMimeEncoded" />
+                    <om:Property Name="TransportType" Value="HTTP" />
+                    <om:Property Name="URI" Value="http://tempURI" />
+                    <om:Property Name="IsDynamic" Value="True" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c54e42b9-0582-4f80-b324-5f2f126c939f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="27.1" HigherBound="29.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="70" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Avista.ESB.OrchestrationServices.PublishErrorPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PublishErrorPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="d1609839-00c3-4854-b5f6-c62aabb210f0" ParentLink="PortDeclaration_CLRAttribute" LowerBound="27.1" HigherBound="28.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="ce3a54bc-3b77-4971-9c63-1cf3067fdb61" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendEmailPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="930cfad9-4149-4bdf-a2ab-57d97455c569" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitNotification" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="826d57c7-f162-4e6a-b653-bf17a89d368a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.36">
+                    <om:Property Name="Ref" Value="Avista.ESB.Schemas.Html" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c0eb21be-159d-47b3-8e2e-6ad3932e2113" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PublishErrorPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="569ef388-32da-4d1b-ae25-05bd8bb9cb38" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OpsPublishError" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="88c89a10-1187-4da3-917c-9ee1e96ba7eb" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.51">
+                    <om:Property Name="Ref" Value="Avista.ESB.Schemas.AvistaFaultEnvelope" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="3a429e84-0764-414e-b668-cef02595c81f" ParentLink="Module_CorrelationType" LowerBound="18.1" HigherBound="22.1">
+            <om:Property Name="TypeModifier" Value="Private" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PublishErrorType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="a41f8d86-6e79-46ba-9881-7c341dc57bb3" ParentLink="CorrelationType_PropertyRef" LowerBound="20.9" HigherBound="20.30">
+                <om:Property Name="Ref" Value="ErrorReport.ErrorType" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Avista.ESB.OrchestrationServices
+{
+    internal porttype SendEmailPortType
+    {
+        oneway SubmitNotification
+        {
+            Avista.ESB.Schemas.Html
+        };
+    };
+    internal porttype PublishErrorPortType
+    {
+        oneway OpsPublishError
+        {
+            Avista.ESB.Schemas.AvistaFaultEnvelope
+        };
+    };
+    private correlationtype PublishErrorType
+    {
+        ErrorReport.ErrorType
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    public service SendEmailNotification
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding(typeof(Avista.ESB.Pipelines.SendMimeEncoded))]
+        port uses dynamic SendEmailPortType lspSendEmail;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PublishErrorPortType PublishErrorPort;
+        correlation PublishErrorType PublishErrorTypeSet;
+        message Avista.ESB.Schemas.Html msgFormattedEmail;
+        message Avista.ESB.Schemas.AvistaFaultEnvelope FaultMessage;
+        Avista.ESB.Utilities.OrchestrationContext context;
+        Avista.ESB.Utilities.EmailNotificationSettings emailNotificationSettings;
+        System.String toEmailAddress;
+        System.ArgumentNullException invalidArgumentException;
+        System.String fromEmailAddress;
+        Avista.ESB.Utilities.ArchiveManager HP_ArchiveManager;
+        System.String archiveResponse;
+        body (message Avista.ESB.Schemas.Html msgEmailNotificationRequest, System.String param_ToEmailAddress)
+        {
+            context = new Avista.ESB.Utilities.OrchestrationContext();
+            emailNotificationSettings = new Avista.ESB.Utilities.EmailNotificationSettings();
+            toEmailAddress = "";
+            invalidArgumentException = new System.ArgumentNullException();
+            fromEmailAddress = "";
+            HP_ArchiveManager = new Avista.ESB.Utilities.ArchiveManager();
+            archiveResponse = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("dbe622c1-2070-4c80-afb0-bdf4a34203ca")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("866ceac0-9ea6-4631-abc7-8982cb8cbe3c")]
+                    msgFormattedEmail = msgEmailNotificationRequest;
+                    archiveResponse = HP_ArchiveManager.ArchiveMessage(msgFormattedEmail, 10040, true,"SendEmailNotification|Initial|||EmailNotificationMessage", true);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0bad4254-7e6e-4832-a133-3eeb63ebe5f5")]
+                    toEmailAddress = param_ToEmailAddress;
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("c873731f-912a-4977-a8cf-091aafa7534e")]
+                    if (System.String.IsNullOrEmpty(toEmailAddress))
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("7ff32bd3-37de-4b6b-9712-ce31b729df1e")]
+                        throw invalidArgumentException;
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("4925795b-d4a6-446a-8aed-ebfba962960b")]
+                        context.Action = " creating formatted email notification.";
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("be769839-a197-4dc6-9da7-62d2a010b63e")]
+                        construct msgFormattedEmail
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("deec2e9a-1bbf-433a-b1c4-8d82bf61ae30")]
+                            msgFormattedEmail = msgEmailNotificationRequest;
+                            msgFormattedEmail(*) = msgEmailNotificationRequest(*);
+                            
+                            msgFormattedEmail(SMTP.SMTPAuthenticate) = 0;
+                            msgFormattedEmail(SMTP.EmailBodyTextCharset) = "utf-8";
+                            msgFormattedEmail(Microsoft.XLANGs.BaseTypes.ContentType) = "text/html";
+                            
+                            lspSendEmail(Microsoft.XLANGs.BaseTypes.Address) = "mailto:" + toEmailAddress;
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("f2b667a3-b46b-445b-aeab-737c30c239ab")]
+                        context.Action = " sending formatted email notification.";
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("dbe45f1e-2962-4aea-9e52-9a55c38721e2")]
+                        send (lspSendEmail.SubmitNotification, msgFormattedEmail);
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8e04bc95-a152-4f99-ba99-58c367e8a97a")]
+                    catch (System.Exception exception)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ae59535-1341-4c59-992d-3967a7d247a6")]
+                        construct FaultMessage
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("dd2131f0-ae4c-4d89-8e12-c13516140a56")]
+                            FaultMessage = Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.CreateFaultMessage(exception, msgEmailNotificationRequest, Avista.ESB.Utilities.ExceptionManagement.ExceptionHandler.FaultType.SystemException);
+                            
+                            FaultMessage.ErrorType = "SystemException";
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ae44537e-9aa5-454e-9b20-c61f1d38f98e")]
+                        send (PublishErrorPort.OpsPublishError, FaultMessage, initialize PublishErrorTypeSet);
+                    }
+                }
+            }
+        }
+    }
+}
+

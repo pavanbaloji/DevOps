@@ -1,0 +1,10 @@
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess.MSBuildTasks\bin\Release\XmlPreprocess.MSBuildTasks.dll
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess.MSBuildTasks\bin\Release\XmlPreprocess.MSBuildTasks.pdb
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess.MSBuildTasks\obj\Release\XmlPreprocess.MSBuildTasks.csprojResolveAssemblyReference.cache
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess.MSBuildTasks\obj\Release\XmlPreprocess.MSBuildTasks.dll
+D:\Avista\BTDF\xmlpreprocess\XmlPreprocess.MSBuildTasks\obj\Release\XmlPreprocess.MSBuildTasks.pdb
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess.MSBuildTasks\bin\Release\XmlPreprocess.MSBuildTasks.dll
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess.MSBuildTasks\bin\Release\XmlPreprocess.MSBuildTasks.pdb
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess.MSBuildTasks\obj\Release\XmlPreprocess.MSBuildTasks.csprojResolveAssemblyReference.cache
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess.MSBuildTasks\obj\Release\XmlPreprocess.MSBuildTasks.dll
+D:\Avista\Projects\Dev\VS POC\DeploymentFramework\xmlpreprocess\XmlPreprocess.MSBuildTasks\obj\Release\XmlPreprocess.MSBuildTasks.pdb

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AvistaEsbLookupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EsbFaultEvents">
+          <Key>
+            <PropertyRef Name="EventId" />
+            <PropertyRef Name="FaultSvcName" />
+            <PropertyRef Name="FaultType" />
+          </Key>
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EventSource" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="FaultSvcName" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="FaultType" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FieldRequestOrderReason">
+          <Key>
+            <PropertyRef Name="FldRequestType" />
+            <PropertyRef Name="FldReasonCode" />
+          </Key>
+          <Property Name="FldRequestType" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="FldReasonCode" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="FldReasonDesc" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="InactiveDate" Type="date" />
+        </EntityType>
+        <EntityType Name="FieldRequestResolution">
+          <Key>
+            <PropertyRef Name="FldResolutionCode" />
+          </Key>
+          <Property Name="FldResolutionCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="FldResolutionDesc" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AvistaEsbLookupModelStoreContainer">
+          <EntitySet Name="EsbFaultEvents" EntityType="Self.EsbFaultEvents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FieldRequestOrderReason" EntityType="Self.FieldRequestOrderReason" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FieldRequestResolution" EntityType="Self.FieldRequestResolution" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AvistaEsbLookupModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="AvistaESBLookupEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="FieldRequestOrderReasons" EntityType="AvistaEsbLookupModel.FieldRequestOrderReason" />
+          <EntitySet Name="FieldRequestResolutions" EntityType="AvistaEsbLookupModel.FieldRequestResolution" />
+          <EntitySet Name="EsbFaultEvents" EntityType="AvistaEsbLookupModel.EsbFaultEvent" />
+        </EntityContainer>
+        <EntityType Name="FieldRequestOrderReason">
+          <Key>
+            <PropertyRef Name="FldRequestType" />
+            <PropertyRef Name="FldReasonCode" />
+          </Key>
+          <Property Type="String" Name="FldRequestType" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FldReasonCode" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FldReasonDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="InactiveDate" Precision="0" />
+        </EntityType>
+        <EntityType Name="FieldRequestResolution">
+          <Key>
+            <PropertyRef Name="FldResolutionCode" />
+          </Key>
+          <Property Type="String" Name="FldResolutionCode" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FldResolutionDesc" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EsbFaultEvent">
+          <Key>
+            <PropertyRef Name="EventId" />
+            <PropertyRef Name="FaultSvcName" />
+            <PropertyRef Name="FaultType" />
+          </Key>
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="EventType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EventSource" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FaultSvcName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FaultType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AvistaEsbLookupModelStoreContainer" CdmEntityContainer="AvistaESBLookupEntities">
+          <EntitySetMapping Name="FieldRequestOrderReasons">
+            <EntityTypeMapping TypeName="AvistaEsbLookupModel.FieldRequestOrderReason">
+              <MappingFragment StoreEntitySet="FieldRequestOrderReason">
+                <ScalarProperty Name="InactiveDate" ColumnName="InactiveDate" />
+                <ScalarProperty Name="FldReasonDesc" ColumnName="FldReasonDesc" />
+                <ScalarProperty Name="FldReasonCode" ColumnName="FldReasonCode" />
+                <ScalarProperty Name="FldRequestType" ColumnName="FldRequestType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FieldRequestResolutions">
+            <EntityTypeMapping TypeName="AvistaEsbLookupModel.FieldRequestResolution">
+              <MappingFragment StoreEntitySet="FieldRequestResolution">
+                <ScalarProperty Name="FldResolutionDesc" ColumnName="FldResolutionDesc" />
+                <ScalarProperty Name="FldResolutionCode" ColumnName="FldResolutionCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EsbFaultEvents">
+            <EntityTypeMapping TypeName="AvistaEsbLookupModel.EsbFaultEvent">
+              <MappingFragment StoreEntitySet="EsbFaultEvents">
+                <ScalarProperty Name="FaultType" ColumnName="FaultType" />
+                <ScalarProperty Name="FaultSvcName" ColumnName="FaultSvcName" />
+                <ScalarProperty Name="EventSource" ColumnName="EventSource" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="True" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <edmx:Diagram Name="AvistaEsbLookupModel">
+        <edmx:EntityTypeShape EntityType="AvistaEsbLookupModel.FieldRequestOrderReason" Width="2.625" PointX="0.75" PointY="3.75" Height="1.592306315104167" />
+        <edmx:EntityTypeShape EntityType="AvistaEsbLookupModel.FieldRequestResolution" Width="2.375" PointX="5" PointY="3.5" Height="1.2636116536458317" />
+        <edmx:EntityTypeShape EntityType="AvistaEsbLookupModel.EsbFaultEvent" Width="1.5" PointX="0.75" PointY="0.75" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

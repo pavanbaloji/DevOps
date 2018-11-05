@@ -1,0 +1,31 @@
+﻿CREATE TABLE [dbo].[PartProperty](
+	[PartId] [uniqueidentifier] NOT NULL,
+	[PropertyIndex] [int] NOT NULL,
+	[Namespace] [nvarchar](256) NOT NULL,
+	[Name] [nvarchar](256) NOT NULL,
+	[Value] [nvarchar](max) NOT NULL,
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_PartProperty] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[PartProperty]  WITH CHECK ADD  CONSTRAINT [FK_PartProperty_PartId] FOREIGN KEY([PartId])
+REFERENCES [dbo].[Part] ([PartId])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[PartProperty] CHECK CONSTRAINT [FK_PartProperty_PartId]
+GO
+
+
+CREATE UNIQUE NONCLUSTERED INDEX [U_PartIDPropertyIndex] ON [dbo].[PartProperty]
+(
+	[PartId] ASC,
+	[PropertyIndex] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+

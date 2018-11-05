@@ -1,0 +1,10 @@
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\bin\Debug\SetEnvUI.exe.config
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\bin\Debug\Sample.xml
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\bin\Debug\SetEnvUI.exe
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\bin\Debug\SetEnvUI.pdb
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\obj\Debug\SetEnvUI.csprojResolveAssemblyReference.cache
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\obj\Debug\SetEnvUI.Properties.Resources.resources
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\obj\Debug\SetEnvUI.SetEnvUIForm.resources
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\obj\Debug\SetEnvUI.csproj.GenerateResource.Cache
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\obj\Debug\SetEnvUI.exe
+D:\Avista\BTDF\DeploymentFramework\src\Tools\SetEnvUI\obj\Debug\SetEnvUI.pdb

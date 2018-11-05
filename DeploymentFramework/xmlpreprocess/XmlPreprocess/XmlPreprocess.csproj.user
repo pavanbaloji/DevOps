@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>/v /c /noDirectives /i:"C:\Program Files %28x86%29\Avista.ESB\1.0\Deployment\Configurations\ConfigTemplate.xml" /o:"C:\Program Files %28x86%29\Avista.ESB\1.0\Deployment\Configurations\PreProcessed_ConfigTemplate.xml" /d:CurDir="C:\Program Files %28x86%29\Avista.ESB\1.0" /s:"C:\Program Files %28x86%29\Avista.ESB\1.0\Deployment\EnvironmentSettings\Exported_LocalSettings.xml"</StartArguments>
+  </PropertyGroup>
+</Project>

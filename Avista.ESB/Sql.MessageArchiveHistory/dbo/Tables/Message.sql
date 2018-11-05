@@ -1,0 +1,116 @@
+﻿CREATE TABLE [dbo].[Message](
+	[MessageId] [uniqueidentifier] NOT NULL CONSTRAINT [DF_Message_MessageId]  DEFAULT (newid()),
+	[InterchangeId] [nvarchar](36) NULL,
+	[MessageType] [nvarchar](256) NULL,
+	[ActivityId] [nvarchar](36) NULL,
+	[Tag] [nvarchar](50) NULL,
+	[InsertedDate] [datetime] NULL CONSTRAINT [DF_Message_InsertedDate]  DEFAULT (getutcdate()),
+	[ExpiryDate] [datetime] NULL,
+	[ArchiveTypeId] [int] NULL,
+	[SourceSystemId] [int] NULL,
+	[TargetSystemId] [int] NULL,
+	[Description] [nvarchar](250) NULL,
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Message] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+) 
+
+GO
+
+
+ALTER TABLE [dbo].[Message]  WITH CHECK ADD  CONSTRAINT [FK_Message_ArchiveTypeId] FOREIGN KEY([ArchiveTypeId])
+REFERENCES [dbo].[ArchiveType] ([Id])
+GO
+
+ALTER TABLE [dbo].[Message] CHECK CONSTRAINT [FK_Message_ArchiveTypeId]
+GO
+
+ALTER TABLE [dbo].[Message]  WITH CHECK ADD  CONSTRAINT [FK_Message_SourceEndpointId] FOREIGN KEY([SourceSystemId])
+REFERENCES [dbo].[Endpoint] ([Id])
+GO
+
+ALTER TABLE [dbo].[Message] CHECK CONSTRAINT [FK_Message_SourceEndpointId]
+GO
+
+ALTER TABLE [dbo].[Message]  WITH CHECK ADD  CONSTRAINT [FK_Message_TargetEndpointId] FOREIGN KEY([TargetSystemId])
+REFERENCES [dbo].[Endpoint] ([Id])
+GO
+
+ALTER TABLE [dbo].[Message] CHECK CONSTRAINT [FK_Message_TargetEndpointId]
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_InsertedDate] ON [dbo].[Message]
+(
+	[InsertedDate] DESC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_Message_ArchiveType] ON [dbo].[Message]
+(
+	[ArchiveTypeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_Message_ExpiryDate] ON [dbo].[Message]
+(
+	[ExpiryDate] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_Message_InterchangeId_0C7C0] ON [dbo].[Message]
+(
+	[InterchangeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+
+CREATE NONCLUSTERED INDEX [IX_Message_InterchangeId_MessageId_InsertedDate_ExpiryDate] ON [dbo].[Message]
+(
+	[InterchangeId] ASC
+)
+INCLUDE ( 	[MessageId],
+	[InsertedDate],
+	[ExpiryDate]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+
+CREATE NONCLUSTERED INDEX [IX_Message_SourceSystem] ON [dbo].[Message]
+(
+	[SourceSystemId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_Message_Tag_86DD3] ON [dbo].[Message]
+(
+	[Tag] ASC
+)
+INCLUDE ( 	[MessageId],
+	[InterchangeId],
+	[InsertedDate],
+	[ExpiryDate],
+	[ArchiveTypeId],
+	[SourceSystemId],
+	[TargetSystemId],
+	[Description]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+CREATE NONCLUSTERED INDEX [IX_Message_TargetSystem] ON [dbo].[Message]
+(
+	[TargetSystemId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+CREATE NONCLUSTERED INDEX [NonClusteredIndex-20180518-103730] ON [dbo].[Message]
+(
+	[InsertedDate] DESC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [U_MessageID] ON [dbo].[Message]
+(
+	[MessageId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+GO
+

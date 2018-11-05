@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<connectionStrings>
+	<add name="CachingDbfromBTDF" connectionString="Data Source=${BizTalkDbServer};Initial Catalog=Caching;Integrated Security=True" providerName="System.Data.SqlClient" />
+	</connectionStrings>
+	<appSettings/>
+</configuration>
