@@ -13,7 +13,7 @@ using Avista.ESB.Admin.Utility;
 namespace Avista.ESB.Testing
 {
     /// <summary>
-    /// Wrapper class for the flat file assembler tool.
+    /// Wrapper class for the flat file assembler
     /// </summary>
     public class FlatFileAsm
     {
